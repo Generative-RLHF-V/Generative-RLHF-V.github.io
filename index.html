@@ -680,7 +680,7 @@
         </div>
 
         <div class="figure">
-            <img src="/Users/zhoujiayi/PKU/generative_rm_v/Generative-RLHF-V.github.io/assets/figure1.png" alt="Figure 1">
+            <img src="./assets/figure1.png" alt="Figure 1">
             <div class="figure-caption">
                 <p>Learning from human preference is a major challenge in AI alignment. In MLLM's alignment, traditional RLHF methods only learn scalar scores from preferences. In contrast, our Generative RLHF-V can learn principles from preferences and optimize based on a more comprehensive comparison. Experimental results show that Generative RLHF-V elevates 2B and 3B MLLMs to 7B performance across 7 benchmarks. It also advances pretrained models to instruct model capabilities and enables open-source models to match closed-source experts.</p>
             </div>
@@ -698,7 +698,7 @@
         </div>
 
         <div class="figure">
-            <img src="/Users/zhoujiayi/PKU/generative_rm_v/Generative-RLHF-V.github.io/assets/figure2.png" alt="Figure 2">
+            <img src="./assets/figure2.png" alt="Figure 2">
             <div class="figure-caption">
                 <p>Comparison of our pipelines to traditional ones. <b>For reward modeling</b>, we make generative RM actively reason about the advantages and disadvantages between two answers, and output corresponding scores. If the better response gets a higher score, it provides a positive reward. <b>For RL optimization</b>, we compare responses in pairs within a group to obtain more accurate scores.</p>
             </div>
@@ -723,7 +723,7 @@
         </div>
 
         <div class="figure">
-            <img src="/Users/zhoujiayi/PKU/generative_rm_v/Generative-RLHF-V.github.io/assets/example.png" alt="Example of generative reward modeling from RL">
+            <img src="./assets/example.png" alt="Example of generative reward modeling from RL">
             <div class="figure-caption">
                 <p>An example of generative reward modeling from RL. The goal of RL is to make MLLMs assign higher scores to responses that align with human preferences. Through RL optimization, MLLMs can infer the underlying principle behind how humans annotate these binary preferences.</p>
             </div>
@@ -735,7 +735,7 @@
         </div>
 
         <div class="figure">
-            <img src="/Users/zhoujiayi/PKU/generative_rm_v/Generative-RLHF-V.github.io/assets/example_rl.png" alt="Example of RL from grouped comparison">
+            <img src="./assets/example_rl.png" alt="Example of RL from grouped comparison">
             <div class="figure-caption">
                 <p>An example of RL from grouped comparison. Its advantage lies in utilizing grouped comparisons to achieve more accurate scoring. Response B provides accurate and comprehensive information, thus receiving the highest score; although response A is somewhat arbitrary, it performs accurate image recognition and obtains a higher score than C and D.</p>
             </div>
@@ -1111,7 +1111,7 @@
         </div>
 
         <div class="figure">
-            <img src="/Users/zhoujiayi/PKU/generative_rm_v/Generative-RLHF-V.github.io/assets/rm_exp.png" alt="Comparison of RMs accuracy">
+            <img src="./assets/rm_exp.png" alt="Comparison of RMs accuracy">
             <div class="figure-caption">
                 <p>Comparison of RMs accuracy on OOD discriminative tasks. (P) denotes the concatenation of the annotation principle from the corresponding preference dataset to the models' output, serving as hints for inference. All models represented by the bar charts were trained on the Align-Anything dataset. The purple dashed line indicates expert performance.</p>
             </div>
@@ -1122,7 +1122,7 @@
         </div>
 
         <div class="figure">
-            <img src="/Users/zhoujiayi/PKU/generative_rm_v/Generative-RLHF-V.github.io/assets/exp_rl_scaling.png" alt="Scaling trend of RL performance">
+            <img src="./assets/exp_rl_scaling.png" alt="Scaling trend of RL performance">
             <div class="figure-caption">
                 <p>Scaling trend of RL performance with the number of candidate responses n, where GC denotes grouped comparison. It reveals that integrating GC and RL with the GRM framework significantly enhances RL performance across various settings of n. Moreover, this improvement becomes more pronounced as n increases.</p>
             </div>
@@ -1170,7 +1170,7 @@
                     </div>
                 </div>
                 <div class="col-md-9">
-                    <img src="/Users/zhoujiayi/PKU/generative_rm_v/Generative-RLHF-V.github.io/assets/exp_scores.png" alt="Scoring distribution">
+                    <img src="./assets/exp_scores.png" alt="Scoring distribution">
                     <div class="figure-caption">
                         <p>The scoring distribution of the GRM + RL model on MLLM-as-a-judge's Score task. Figure (a) is the annotated human scores, while Figure (b) is GRM + RL scores and Figure (c) is its fine-grained scores distribution.</p>
                     </div>
@@ -1183,7 +1183,7 @@
         </div>
 
         <div class="figure">
-            <img src="/Users/zhoujiayi/PKU/generative_rm_v/Generative-RLHF-V.github.io/assets/exp_hack.png" alt="Reward hacking behavior">
+            <img src="./assets/exp_hack.png" alt="Reward hacking behavior">
             <div class="figure-caption">
                 <p>The reward hacking behavior manifested by GRLHF-V and its associated quantitative performance, under conditions of overfitting in both reward modeling and RL training.</p>
             </div>
