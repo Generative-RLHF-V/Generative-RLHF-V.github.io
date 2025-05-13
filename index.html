@@ -1,13 +1,12 @@
-
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <script src="bootstrap.js"></script>
 <script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script> 
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"> -->
+
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -46,1544 +45,1225 @@
     });
 </script>
 
-<!-- <script>
-    function onScroll() {
-        var sections = document.querySelectorAll("section");
-        var menuLinks = document.querySelectorAll("#table-of-contents");
-
-        var currentSectionId = "";
-        sections.forEach((section) => {
-            var rect = section.getBoundingClientRect();
-            // 检查section的顶部或底部是否在视窗内
-            if (rect.top <= 50 && rect.bottom >= 50) {
-                currentSectionId = section.id;
-            }
-        });
-
-        // 更新链接的活跃状态
-        menuLinks.forEach((link) => {
-            if (link.getAttribute("href") === "#" + currentSectionId) {
-                link.classList.add("active-link");
-            } else {
-                link.classList.remove("active-link");
-            }
-        });
+<style type="text/css">
+    body {
+        font-family: "Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 300;
+        font-size: 17px;
+        margin-left: auto;
+        margin-right: auto;
     }
-
-    // 监听滚动事件
-    window.addEventListener("scroll", onScroll);
-</script> -->
-
-<script>
-    function detectDeviceType() {
-        const userAgent = navigator.userAgent.toLowerCase();
-        if (/mobile/i.test(userAgent)) {
-            return 'Mobile';
-        } else {
-            return 'Desktop';
+    
+    @media screen and (min-width: 980px){
+        body {
+            width: 980px;
         }
     }
-
-    console.log(detectDeviceType());
-</script>
-<!-- TBD -->
-
-<style type="text/css">
-body {
-    font-family: "Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: 300;
-    font-size: 17px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media screen and (min-width: 980px){
-    body {
-        width: 980px;
+    
+    h1 {
+        font-weight:300;
+        line-height: 1.15em;
     }
-}
-
-h1 {
-    font-weight:300;
-    line-height: 1.15em;
-}
-
-h2 {
-    font-size: 1.75em;
-}
-a:link,a:visited {
-    color: #5364cc;
-    text-decoration: none;
-}
-a:hover {
-    color: #208799;
-}
-h1 {
-    text-align: center;
-}
-h2,h3 {
-    text-align: left;
-}
-
-h1 {
-    font-size: 40px;
-    font-weight: 500;
-}
-h2 {
-    font-weight: 400;
-    margin: 16px 0px 4px 0px;
-}
-h3 {
-    font-weight: 600;
-    margin: 16px 0px 4px 0px;
-}
-
-.paper-title {
-    padding: 1px 0px 1px 0px;
-}
-section {
-    margin: 32px 0px 32px 0px;
-    text-align: justify;
-    clear: both;
-}
-.col-5 {
-     width: 20%;
-     float: left;
-}
-.col-4 {
-     width: 25%;
-     float: left;
-}
-.col-3 {
-     width: 33%;
-     float: left;
-}
-.col-2 {
-     width: 50%;
-     float: left;
-}
-.col-1 {
-     width: 100%;
-     float: left;
-}
-
-.author-row, .affil-row {
-    font-size: 26px;
-}
-
-.author-row-new { 
-    text-align: center; 
-}
-
-.author-row-new a {
-    display: inline-block;
-    font-size: 20px;
-    padding: 4px;
-}
-
-.author-row-new sup {
-    color: #313436;
-    font-size: 12px;
-}
-
-.affiliations-new {
-    font-size: 18px;
-    text-align: center;
-    width: 80%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-}
-
-.row {
-    margin: 16px 0px 16px 0px;
-}
-.authors {
-    font-size: 26px;
-}
-.affiliatons {
-    font-size: 18px;
-}
-.affil-row {
-    margin-top: 18px;
-}
-.teaser {
-    max-width: 100%;
-}
-.text-center {
-    text-align: center;  
-}
-.screenshot {
-    width: 256px;
-    border: 1px solid #ddd;
-}
-.screenshot-el {
-    margin-bottom: 16px;
-}
-hr {
-    height: 1px;
-    border: 0; 
-    border-top: 1px solid #ddd;
-    margin: 0;
-}
-.material-icons {
-    vertical-align: -6px;
-}
-.material-symbols-outlined{
-    vertical-align: -6px;
-}
-p {
-    line-height: 1.25em;
-}
-.caption {
-    font-size: 16px;
-    color: #666;
-    margin-top: 4px;
-    margin-bottom: 10px;
-}
-
-
-video {
-    display: block;
-    margin: auto;
-}
-
-details { background-color: #f0f0f0; } /* 浅灰色背景 */
-summary { background-color: #FFFFFF; }
-
-figure {
-    display: block;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-#bibtex pre {
-    font-size: 14px;
-    background-color: #eee;
-    padding: 16px;
-}
-.blue {
-    color: #2c82c9;
-    font-weight: bold;
-}
-.orange {
-    color: #d35400;
-    font-weight: bold;
-}
-.flex-row {
-    display: flex;
-    flex-flow: row wrap;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.paper-btn-coming-soon {
-    position: relative; 
-    top: 0;
-    left: 0;
-}
-
-.coming-soon {
-    position: absolute;
-    top: -15px;
-    right: -15px;
-}
-
-
-.paper-btn {
-  position: relative;
-  text-align: center;
-
-  display: inline-block;
-  margin: 8px;
-  padding: 8px 8px;
-
-  border-width: 0;
-  outline: none;
-  border-radius: 2px;
-  
-  background-color: #5364cc;
-  color: white !important;
-  font-size: 20px;
-  width: 100px;
-  font-weight: 600;
-}
-.paper-btn-parent {
-    display: flex;
-    justify-content: center;
-    margin: 16px 0px;
-}
-
-.paper-btn:hover {
-    opacity: 0.85;
-}
-
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 16px;
-    padding-right: 16px;
-}
-
-.venue {
-    font-size: 23px;
-}
-
-.topnav {
-    background-color: #EEEEEE;
-    overflow: hidden;
-}
-
-.topnav div {
-    max-width: 1070px;
-    margin: 0 auto;
-}
-
-.topnav a {
-    display: inline-block;
-    color: black;
-    text-align: center;
-    vertical-align: middle;
-    padding: 16px 16px;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.topnav img {
-    padding: 2px 0px;
-    width: 100%;
-    margin: 0.2em 0px 0.3em 0px;
-    vertical-align: middle;
-}
-
-pre {
-    font-size: 0.9em;
-    padding-left: 7px;
-    padding-right: 7px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    border-radius: 3px;
-    background-color: rgb(235, 235, 235);
-    overflow-x: auto;
-}
-.download-thumb {
-    display: flex;
-}
-
-@media only screen and (max-width: 620px) {
-    .download-thumb {
-        display: none;
+    
+    h2 {
+        font-size: 1.75em;
     }
-}
-
-.paper-stuff {
-    width: 50%;
-    font-size: 20px;
-}
-
-@media only screen and (max-width: 620px) {
-    .paper-stuff {
-        width: 100%;
+    a:link,a:visited {
+        color: #5364cc;
+        text-decoration: none;
     }
-}
-* {
-  box-sizing: border-box;
-}
-
-.column {
-  text-align: center;
-  float: left;
-  width: 16.666%;
-  padding: 5px;
-}
-.column3 {
-  text-align: center;
-  float: left;
-  width: 33.333%;
-  padding: 5px;
-}
-.column4 {
-  text-align: center;
-  float: left;
-  width: 50%;
-  padding: 5px;
-}
-.column5 {
-  text-align: center;
-  float: left;
-  width: 20%;
-  padding: 5px;
-}
-.border-right {
-    border-right: 1px solid black;
-}
-.border-bottom{
-    border-bottom: 1px solid black;
-}
-
-
-
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-}
-.figure-img {
-  margin-bottom: 0.5rem;
-  line-height: 1;
-}
-
-.pdf-object {
-    border: none; /* 移除边框 */
-}
-
-
-.center-content {
-    text-align: center; /* 确保内容居中 */
-}
-
-.center-content img {
-    margin: 0 auto; /* 水平居中 */
-    display: block; /* 使 img 行为像块级元素 */
-}
-
-.rounded-circle {
-  border-radius: 50% !important;
-}
-
-.red-bold-italic {
-    color: red;        /* 设置文字颜色为红色 */
-    font-weight: bold; /* 设置文字为加粗 */
-    font-style: italic;/* 设置文字为斜体 */
-}
-
-#teaser-image {
-    text-align: center; /* 确保内容居中 */
-}
-
-#teaser-image figure {
-    display: inline-block; /* 使 figure 行为像内联元素，以便居中 */
-    margin: 0 auto; /* 水平居中 */
-}
-
-.image-container {
-    display: flex;
-    flex-direction: row; /* 设置为行布局，使图像水平排列 */
-    justify-content: space-between; /* 在容器中水平分散排列图像 */
-    align-items: center; /* 在容器中垂直居中对齐图像 */
-}
-
-.image-container br {
-    margin-top: 20px; /* 调整间距的大小，根据需要进行调整 */
-}
-
-#table-of-contents {
-    position: fixed; /* 固定位置 */
-    left: 20px;     /* 距离窗口右边缘20px */
-    top: 50px;      /* 距离窗口顶部100px */
-    width: 200px;    /* 目录的宽度 */
-    background-color: white; /* 背景色 */
-    padding: 10px;   /* 内边距 */
-    border: 1px solid #ddd; /* 边框样式 */
-    box-shadow: 0px 0px 10px #ddd; /* 阴影效果 */
-    z-index: 1000;   /* 确保目录在最顶层 */
-}
-
-#table-of-contents h2 {
-    margin-top: 0; /* 移除标题的顶部外边距 */
-}
-
-#table-of-contents ul {
-    list-style-type: none; /* 去除列表符号 */
-    padding: 0; /* 去除内边距 */
-}
-
-#table-of-contents li {
-    margin-bottom: 10px; /* 列表项之间的间距 */
-}
-
-#table-of-contents a {
-    text-decoration: none; /* 移除链接下划线 */
-    color: #000; /* 设置链接颜色 */
-}
-
-#table-of-contents a:hover {
-    text-decoration: underline; /* 鼠标悬停时添加下划线 */
-}
-
-.active-link {
-    color: blue; /* 设置活跃链接的颜色为蓝色 */
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 500px) {
-  .column {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 500px) {
-  .column3 {
-    width: 100%;
-  }
-}
-
-</style>
-<link rel="stylesheet" href="bootstrap-grid.css">
-
-<script type="text/javascript" src="../js/hidebib.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
-    <head>
-        <!-- <title> Achieving Efficient Alignment through Learned Correction</title> -->
-        <title>[NeurIPS 2024 Oral] Aligner: Efficient Alignment by Learning to Correct</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta property="og:description" content="Aligner: Efficient Alignment by Learning to Correct"/>
-        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
-        <meta name="twitter:title" content="Aligner: Efficient Alignment by Learning to Correct">
-        <meta name="twitter:description" content="">
-        <meta name="twitter:image" content="">
-    </head>
-
- <body>
-
-
-<div class="container">
-    <div class="paper-title">
-    <h1> 
-        <!-- <i>Aligner</i> :
-        Achieving Efficient Alignment through <br>
-        Weak-to-Strong Correction -->
-        <!-- Achieving Efficient Alignment through Learned Correction -->
-        <style>
-            .paper-title h1 {
-                font-family: 'Times New Roman', Times, serif;
-                font-weight: bold; /* Make the text bold */
-                font-size: 50px; /* Set the font size */
-                margin-bottom: 10px; /* Reduce the bottom margin */
-            }
-        </style>
-        <div class="paper-title">
-            <h1>Aligner: Efficient Alignment by Learning to Correct</h1>
-        </div>
-        <!-- <figure class="center-content">
-            <img src="materials/logo2.png" style="width: 100%;">
-        </figure> -->
-    </h1>
-    </div>
-
-    <div id="authors">
-        <center>
-            <div class="author-row-new">
-                <a href="https://jijiaming.com">Jiaming Ji<sup><strong>*</strong></sup></a>,
-                <a href="https://cby-pku.github.io">Boyuan Chen<strong>*</strong></a>,
-                <a href="https://htlou.github.io">Hantao Lou</a>,
-                <a href="https://scholar.google.com/citations?user=JQx-_5gAAAAJ">Donghai Hong</a>,
-                <a href="https://github.com/muchvo">Borong Zhang</a>,
-                <a href="https://github.com/XuehaiPan">Xuehai Pan</a>
-                <a href="https://scholar.google.com/citations?user=eRmX5AsAAAAJ&hl=zh-CN">Juntao Dai</a>
-                <a href="https://tianyiqiu.net">Tianyi Qiu</a>
-                <a href="https://www.yangyaodong.com">Yaodong Yang</a>
-            </div>
-        </center>
-        <center>
-        <div class="affiliations">
-            <span>Institute for AI, Peking University</span><br>
-        </div>
-
-        <div class="affil-row">
-            <div class="venue text-center"><b>NeurIPS 2024 <FONT COLOR="RED">Oral Presentation</FONT></b></div>
-        </div>
-
-        </center>
-<div style="height: 20px;"></div> <!-- 空行 -->
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    .button-container {
-      display: flex;
-      flex-wrap: wrap; /* 自动换行 */
-      gap: 10px; /* 按钮之间的间距 */
-      justify-content: center; /* 居中对齐 */
+    a:hover {
+        color: #208799;
     }
-
-    .button {
-      display: flex;
-      flex-direction: column; /* 图标和文字上下排列 */
-      align-items: center; /* 水平居中 */
-      justify-content: center; /* 垂直居中 */
-      width: 100px; /* 固定宽度 */
-      height: 60px; /* 固定高度 */
-      text-decoration: none; /* 去掉下划线 */
-      background-color: #E8F9FF; /* 按钮背景颜色 */
-      color: #FBFBFB; /* 文本颜色 */
-      border-radius: 8px; /* 圆角 */
-      font-size: 16px; /* 文字大小 */
-      font-family: Arial, sans-serif; /* 字体 */
-      transition: transform 0.2s ease, background-color 0.2s ease; /* 动画效果 */
+    h1 {
+        text-align: center;
     }
-
-    .button:hover {
-      background-color: #4F75FF; /* 悬停背景颜色 */
-	color: #FBFBFB ;
-      transform: scale(1.05); /* 悬停放大效果 */
+    h2,h3 {
+        text-align: left;
     }
-
+    
+    h1 {
+        font-size: 40px;
+        font-weight: 500;
+    }
+    h2 {
+        font-weight: 400;
+        margin: 16px 0px 4px 0px;
+    }
+    h3 {
+        font-weight: 600;
+        margin: 16px 0px 4px 0px;
+    }
+    
+    .paper-title {
+        padding: 1px 0px 1px 0px;
+    }
+    section {
+        margin: 32px 0px 32px 0px;
+        text-align: justify;
+        clear: both;
+    }
+    .col-5 {
+         width: 20%;
+         float: left;
+    }
+    .col-4 {
+         width: 25%;
+         float: left;
+    }
+    .col-3 {
+         width: 33%;
+         float: left;
+    }
+    .col-2 {
+         width: 50%;
+         float: left;
+    }
+    .col-1 {
+         width: 100%;
+         float: left;
+    }
+    
+    .author-row, .affil-row {
+        font-size: 26px;
+    }
+    
+    .author-row-new { 
+        text-align: center; 
+    }
+    
+    .author-row-new a {
+        display: inline-block;
+        font-size: 20px;
+        padding: 4px;
+    }
+    
+    .author-row-new sup {
+        color: #313436;
+        font-size: 12px;
+    }
+    
+    .affiliations-new {
+        font-size: 18px;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    
+    .row {
+        margin: 16px 0px 16px 0px;
+    }
+    .authors {
+        font-size: 26px;
+    }
+    .affiliatons {
+        font-size: 18px;
+    }
+    .affil-row {
+        margin-top: 18px;
+    }
+    .teaser {
+        max-width: 100%;
+    }
+    .text-center {
+        text-align: center;  
+    }
+    .screenshot {
+        width: 256px;
+        border: 1px solid #ddd;
+    }
+    .screenshot-el {
+        margin-bottom: 16px;
+    }
+    hr {
+        height: 1px;
+        border: 0; 
+        border-top: 1px solid #ddd;
+        margin: 0;
+    }
     .material-icons {
-      font-size: 24px; /* 图标大小 */
-      margin-bottom: 5px; /* 图标和文字之间的间距 */
+        vertical-align: -6px;
     }
-  </style>
+    .material-symbols-outlined{
+        vertical-align: -6px;
+    }
+    p {
+        line-height: 1.25em;
+    }
+    .caption {
+        font-size: 16px;
+        color: #666;
+        margin-top: 4px;
+        margin-bottom: 10px;
+    }
+    
+    
+    video {
+        display: block;
+        margin: auto;
+    }
+    
+    details { background-color: #f0f0f0; } /* 浅灰色背景 */
+    summary { background-color: #FFFFFF; }
+    
+    figure {
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #bibtex pre {
+        font-size: 14px;
+        background-color: #eee;
+        padding: 16px;
+    }
+    .blue {
+        color: #2c82c9;
+        font-weight: bold;
+    }
+    .orange {
+        color: #d35400;
+        font-weight: bold;
+    }
+    .flex-row {
+        display: flex;
+        flex-flow: row wrap;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    
+    .paper-btn-coming-soon {
+        position: relative; 
+        top: 0;
+        left: 0;
+    }
+    
+    .coming-soon {
+        position: absolute;
+        top: -15px;
+        right: -15px;
+    }
+    
+    
+    .paper-btn {
+      position: relative;
+      text-align: center;
+    
+      display: inline-block;
+      margin: 8px;
+      padding: 8px 8px;
+    
+      border-width: 0;
+      outline: none;
+      border-radius: 2px;
+      
+      background-color: #5364cc;
+      color: white !important;
+      font-size: 20px;
+      width: 100px;
+      font-weight: 600;
+    }
+    .paper-btn-parent {
+        display: flex;
+        justify-content: center;
+        margin: 16px 0px;
+    }
+    
+    .paper-btn:hover {
+        opacity: 0.85;
+    }
+    
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    
+    .venue {
+        font-size: 23px;
+    }
+    
+    .topnav {
+        background-color: #EEEEEE;
+        overflow: hidden;
+    }
+    
+    .topnav div {
+        max-width: 1070px;
+        margin: 0 auto;
+    }
+    
+    .topnav a {
+        display: inline-block;
+        color: black;
+        text-align: center;
+        vertical-align: middle;
+        padding: 16px 16px;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    
+    .topnav img {
+        padding: 2px 0px;
+        width: 100%;
+        margin: 0.2em 0px 0.3em 0px;
+        vertical-align: middle;
+    }
+    
+    pre {
+        font-size: 0.9em;
+        padding-left: 7px;
+        padding-right: 7px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        border-radius: 3px;
+        background-color: rgb(235, 235, 235);
+        overflow-x: auto;
+    }
+    .download-thumb {
+        display: flex;
+    }
+    
+    @media only screen and (max-width: 620px) {
+        .download-thumb {
+            display: none;
+        }
+    }
+    
+    .paper-stuff {
+        width: 50%;
+        font-size: 20px;
+    }
+    
+    @media only screen and (max-width: 620px) {
+        .paper-stuff {
+            width: 100%;
+        }
+    }
+    * {
+      box-sizing: border-box;
+    }
+    
+    .column {
+      text-align: center;
+      float: left;
+      width: 16.666%;
+      padding: 5px;
+    }
+    .column3 {
+      text-align: center;
+      float: left;
+      width: 33.333%;
+      padding: 5px;
+    }
+    .column4 {
+      text-align: center;
+      float: left;
+      width: 50%;
+      padding: 5px;
+    }
+    .column5 {
+      text-align: center;
+      float: left;
+      width: 20%;
+      padding: 5px;
+    }
+    .border-right {
+        border-right: 1px solid black;
+    }
+    .border-bottom{
+        border-bottom: 1px solid black;
+    }
+    
+    
+    
+    /* Clearfix (clear floats) */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+    }
+    .figure-img {
+      margin-bottom: 0.5rem;
+      line-height: 1;
+    }
+    
+    .pdf-object {
+        border: none; /* 移除边框 */
+    }
+    
+    
+    .center-content {
+        text-align: center; /* 确保内容居中 */
+    }
+    
+    .center-content img {
+        margin: 0 auto; /* 水平居中 */
+        display: block; /* 使 img 行为像块级元素 */
+    }
+    
+    .rounded-circle {
+      border-radius: 50% !important;
+    }
+    
+    .red-bold-italic {
+        color: red;        /* 设置文字颜色为红色 */
+        font-weight: bold; /* 设置文字为加粗 */
+        font-style: italic;/* 设置文字为斜体 */
+    }
+    
+    #teaser-image {
+        text-align: center; /* 确保内容居中 */
+    }
+    
+    #teaser-image figure {
+        display: inline-block; /* 使 figure 行为像内联元素，以便居中 */
+        margin: 0 auto; /* 水平居中 */
+    }
+    
+    .image-container {
+        display: flex;
+        flex-direction: row; /* 设置为行布局，使图像水平排列 */
+        justify-content: space-between; /* 在容器中水平分散排列图像 */
+        align-items: center; /* 在容器中垂直居中对齐图像 */
+    }
+    
+    .image-container br {
+        margin-top: 20px; /* 调整间距的大小，根据需要进行调整 */
+    }
+    
+    #table-of-contents {
+        position: fixed; /* 固定位置 */
+        left: 20px;     /* 距离窗口右边缘20px */
+        top: 50px;      /* 距离窗口顶部100px */
+        width: 200px;    /* 目录的宽度 */
+        background-color: white; /* 背景色 */
+        padding: 10px;   /* 内边距 */
+        border: 1px solid #ddd; /* 边框样式 */
+        box-shadow: 0px 0px 10px #ddd; /* 阴影效果 */
+        z-index: 1000;   /* 确保目录在最顶层 */
+    }
+    
+    #table-of-contents h2 {
+        margin-top: 0; /* 移除标题的顶部外边距 */
+    }
+    
+    #table-of-contents ul {
+        list-style-type: none; /* 去除列表符号 */
+        padding: 0; /* 去除内边距 */
+    }
+    
+    #table-of-contents li {
+        margin-bottom: 10px; /* 列表项之间的间距 */
+    }
+    
+    #table-of-contents a {
+        text-decoration: none; /* 移除链接下划线 */
+        color: #000; /* 设置链接颜色 */
+    }
+    
+    #table-of-contents a:hover {
+        text-decoration: underline; /* 鼠标悬停时添加下划线 */
+    }
+    
+    .active-link {
+        color: blue; /* 设置活跃链接的颜色为蓝色 */
+    }
+    
+    /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 500px) {
+      .column {
+        width: 100%;
+      }
+    }
+    @media screen and (max-width: 500px) {
+      .column3 {
+        width: 100%;
+      }
+    }
+    
+    </style>
+
+    <link rel="stylesheet" href="bootstrap-grid.css">
+
+    <script type="text/javascript" src="../js/hidebib.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+        <head>
+            <!-- <title> Achieving Efficient Alignment through Learned Correction</title> -->
+            <title>Generative RLHF-V: Learning Principles from Multi-modal Human Preference</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta property="og:description" content="Generative RLHF-V: Learning Principles from Multi-modal Human Preference"/>
+            <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+            <meta name="twitter:title" content="Generative RLHF-V: Learning Principles from Multi-modal Human Preference">
+            <meta name="twitter:description" content="Generative RLHF-V: Learning Principles from Multi-modal Human Preference">
+            <meta name="twitter:image" content="">
+        </head>
+    
+     <body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generative RLHF-V: Learning Principles from Multi-modal Human Preference</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1100px;
+        }
+        .paper-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .authors {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .abstract {
+            margin-bottom: 30px;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .section {
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .figure img {
+            max-width: 100%;
+            height: auto;
+        }
+        .figure-caption {
+            margin-top: 10px;
+            text-align: center;
+            font-style: italic;
+        }
+        .quotebox {
+            background-color: #f0f0f0;
+            border-left: 5px solid #ccc;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 0.85em;
+        }
+        th, td {
+            padding: 4px 6px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            white-space: nowrap;
+        }
+        tr.header {
+            border-top: 2px solid #000;
+            border-bottom: 2px solid #000;
+            font-weight: bold;
+        }
+        tr.highlight {
+            background-color: rgb(194, 223, 255);
+        }
+        .delta {
+            font-size: 0.7em;
+            color: gray;
+        }
+        .ours {
+            font-size: 0.7em;
+            color: rgb(0, 64, 255);
+            font-weight: bold;
+        }
+        .neg {
+            font-size: 0.7em;
+            color: rgb(35, 153, 78);
+        }
+        tr.divider {
+            border-top: 1px solid #000;
+        }
+    </style>
 </head>
 <body>
-  <div class="button-container">
-    <a class="button" href="assets/Aligner.pdf" target="_blank">
-      <span class="material-icons">description</span>
-      paper
-    </a>
-    <a class="button" href="https://github.com/PKU-Alignment/aligner" target="_blank">
-      <span class="material-icons">code</span>
-      github
-    </a>
-    <a class="button" href="https://huggingface.co/datasets/aligner/aligner-20K" target="_blank">
-      <span class="material-icons">folder</span>
-      data
-    </a>
-    <a class="button" href="https://huggingface.co/datasets/aligner/alignertails" target="_blank">
-      <span class="material-icons">folder</span>
-      <i>AlignerTails</i>
-    </a>
-    <a class="button" href="https://huggingface.co/aligner/aligner-7b-v1.0" target="_blank">
-      <span class="material-icons">download</span>
-      model
-    </a>
-    <a class="button" href="#qa">
-      <span class="material-icons">quiz</span>
-      FAQ
-    </a>
-  </div>
+    <div class="container">
+        <div class="paper-title">
+            <h1>Generative RLHF-V: Learning Principles from Multi-modal Human Preference</h1>
+        </div>
 
-
-    
-    <!-- <section id="teaser-image">
-        <center>
-            <figure>
-                <video class="centered" width="80%" autoplay loop muted playsinline class="video-background " >
-                    <source src="assets/LION_video_v10.mp4#t=0.001" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </figure>
-
-        </center>
-    </section>
-     -->
-    <div id="table-of-contents">
-        <h2>Contents</h2>
-        <ul>
-            <li><a href="#abstract">Abstract</a></li>
-            <li><a href="#teaser-image">Paradigm</a></li>
-            <li><a href="#method">Structure & Methodology</a></li>
-            <li><a href="#interp">Interpretability</a></li>
-            <li><a href="#application">Applications</a></li>
-            <li><a href="#results">Results Overview</a></li>
-            <li><a href="#detail">Detailed Results</a></li>
-            <li><a href="#qa">FAQ</a></li>
-            <!-- 其他部分的链接 -->
-        </ul>
-    </div>
-    <br>
-    <section id="abstract"/>
-    <hr>
-    <h2>Abstract</h2>
-    <div class="flex-row">
-        <p>
-            With the rapid development of large language models (LLMs) and ever-evolving practical requirements, finding an efficient and effective alignment method has never been more critical. However, the tension between the complexity of current alignment methods and the need for rapid iteration in deployment scenarios necessitates the development of a model-agnostic alignment approach that can operate under these constraints. In this paper, we introduce <i>Aligner</i>, a novel and simple alignment paradigm that learns the correctional residuals between preferred and dispreferred answers using a small model. Designed as a model-agnostic, plug-and-play module, <i>Aligner</i> can be directly applied to various open-source and API-based models with only one-off training, making it suitable for rapid iteration. Notably, <i>Aligner</i> can be applied to any powerful, large-scale upstream models. Moreover, it can even iteratively bootstrap the upstream models using corrected responses as synthetic human preference data, breaking through the model's performance ceiling. Our experiments demonstrate performance improvements by deploying the same <i>Aligner</i> model across 11 different LLMs, evaluated on the 3H dimensions (helpfulness, harmlessness, and honesty). Specifically, <i>Aligner</i>-7B has achieved an average improvement of \(68.9\%\) in helpfulness and \(22.8\%\) in harmlessness across the tested LLMs while also effectively reducing hallucination. In the Alpaca-Eval leaderboard, stacking <i>Aligner</i>-2B on GPT-4 Turbo improved its LC Win Rate from \(55.0\%\) to \(58.3\%\), surpassing GPT-4 Omni's \(57.5\%\) Win Rate (community report).
-        </p>
-    </div>
-    </section>
-    <hr>
-    <section id="teaser-image">
-        <h2>Paradigm</h2>
-        <figure class="mx-auto" style="display: flex; justify-content: center; align-items: center;">
-            <img src="figures/aligner_figure1.jpg" style="width: 550px; margin-right: 50px;">
-            <center><figcaption style="text-align: left;">
-                <strong>Architecture of the <i>Aligner</i> module and illustration of its behavior in semantic space.</strong>
-                <br>
-                The <i>Aligner</i>, a plug-and-play model <span class="red-bold-italic" >(without RLHF)</span>, stacks upon an upstream LLM (aligned or unaligned). It redistributes initial answers from the upstream model into more helpful and harmless answers, thus aligning the composed LLM responses with human intentions. It is challenging to learn direct mappings from queries to aligned answers. Nonetheless, correcting answers based on the upstream model's output is a more tractable learning task.
-            </figcaption></center>
-        </figure>
-        <br>
-        <hr>
-        <br>
-        <figure class="mx-auto" style="display: flex; justify-content: center; align-items: center;">
-            <img src="figures/fast-aligned-clipped.gif" style="width: 550px; margin-right: 50px;">
-            <center><figcaption style="text-align: left;">
-                <strong>Analogy of the <i>Aligner</i> as a residual learning enhancer for LLMs in both architecture and capability aspects.</strong>
-                <br>
-                This schematic showcases the <i>Aligner</i> acting similarly to a residual block in neural networks.
-                It takes an initial output \( y_o \) from the upstream LLM, then the <i>Aligner</i> applies its autoregressive capabilities to generate a corrected version \( y_c \).
-                Just as a residual block uses a shortcut to add modifications without changing the base structure, the <i>Aligner</i> employs a ''copy and correct'' method, overlaying improvements onto the original answer without altering its fundamental structure.
-                This parallel highlights the <i>Aligner</i>'s dual role in preserving the initial response while enhancing it to better align with desired outcomes.
-            </figcaption></center>
-        </figure>
-
-        <!-- <center> -->
-<!--            <center><p><b>A unified framework for composing pre-trained models.</b></p></center>-->
-
-            <!-- <figure class="mx-auto">
-                <center><img class="card-img-top" src="./materials/Presentation1.jpg" width="950"/></center>
-                <center><figcaption style="text-align: left;">
-                    <strong>Left: Architecture of the <i>Aligner</i> module and illustration of its behavior in semantic space.</strong>
-                    <br>
-                    The <i>Aligner</i>, a plug-and-play model, stacks upon an upstream LLM (aligned or unaligned). It redistributes initial answers from the upstream model into more helpful and harmless answers, thus aligning the composed LLM responses with human intentions. It is challenging to learn direct mappings from queries to aligned answers. Nonetheless, correcting answers based on the upstream model’s output is a more tractable learning task.
-                    <br>
-                    <strong>Right: Analogy of the <i>Aligner</i> as a residual learning enhancer for LLMs in both architecture and capability aspects.</strong>
-                    <br>
-                    This schematic showcases the <i>Aligner</i> acting similarly to a residual block in neural networks.
-                    It takes an initial output \( y_o \) from the upstream LLM, then the <i>Aligner</i> applies its autoregressive capabilities to generate a corrected version \( y_c \).
-                    Just as a residual block uses a shortcut to add modifications without changing the base structure, the <i>Aligner</i> employs a ''copy and correct'' method, overlaying improvements onto the original answer without altering its fundamental structure.
-                    This parallel highlights the <i>Aligner</i>'s dual role in preserving the initial response while enhancing it to better align with desired outcomes.
-                    
-                </figcaption></center>
-            </figure> -->
-<!--                <video width="650" loop autoplay muted>-->
-<!--                    <source src="materials/teaser-2.mp4" type="video/mp4">-->
-<!--                </video>-->
-
-<!--                <br><br>-->
-<!--                -->
-<!--                <video width="960" loop autoplay muted>-->
-<!--                    <source src="materials/all_results.mp4" type="video/mp4">-->
-<!--                </video>-->
-
-                <!-- <br><br> -->
-
-                <!-- <video width="800" loop autoplay muted style="border:1px solid black">
-                    <source src="materials/new3.mp4" type="video/mp4">
-                </video>
- -->
-            
-            <br>
-            <hr>
-            <br>
-            <figure class="mx-auto">
-                <center><img class="card-img-top" src="./figures/aligner_performance.png" width="750px"/></center>
-                <center><figcaption style="text-align: left;">
-                    <b>Performance of <i>Aligner</i> Models</b><br>
-                    It is shown that <i>Aligner</i> achieves significant performances in all the settings. All assessments in this table were conducted based on integrating various models with Aligners to compare with the original models to quantify the percentage increase in the <i>3H</i> standard. When integrated and assessed in conjunction with various upstream models, the <i>Aligner</i> requires only a single training session (<i>i.e.</i>, the <i>Aligner</i> can operate in a zero-shot manner and enhance the performance of all upstream models.)
-                    
-                </figcaption></center>
-            </figure>
-            
-
-        <!-- </center> -->
-    </section>
-    
-    
-
-    
-    
-    <section id="method"/>
-        <hr>
-        <h2>Overview of <i>Aligner</i> Methodologies</h2>
-
-            <!-- <br><br> -->
-
-            <!-- <figure class="mx-auto">
-
-                <center><img class="card-img-top" src="./materials/paradiam-new2.jpg" style="width:950px"></center>
-                <br>
-                <center><figcaption style="text-align: left;">
-                    <b>An illustration of our methodology.</b><br>
-                    The Superalignment problem focuses on scaling human oversight for supervising increasingly intelligent and complex AI systems. The <i>Weak-to-Strong Generalization</i>
-                    <cite>
-                        Weak-to-strong generalization: Eliciting strong capabilities with weak supervision.
-                    </cite> 
-                    analogy emphasizes using weaker models to supervise stronger ones. Our approach composes weak and strong models to offer iteratively scalable supervision.
-                </figcaption></center>
-            </figure> -->
-
-<!-- 
-            <hr>
-            <br> -->
-            
-            <figure class="mx-auto">
-                <!--                <left><p>The proposed framework that composes a "generator" and an ensemble of "scorers" through iterative consensus enables zero-shot generalization across a variety of multimodal tasks.</p></left>-->
-                <center><img class="card-img-top" src="./figures/method_comparsion.jpg" style="width:950px"></center>
-                <br>
-                <center><figcaption style="text-align: left;">
-                    <!-- <b>Overview of Alignment Methodologies</b><br> -->
-                     The <i>Aligner</i> module, noted for its flexibility, is not constrained by specific model parameters or configurations. In contrast, traditional methods such as RLHF are limited by their need for direct access to a model's parameters. With the growth of model sizes, such as those with over 70B parameters
-                    <cite>
-                        Llama 2: Open foundation and fine-tuned chat models.
-                    </cite>
-                    , RLHF's computational demands have increased. Filter-based methods often overcorrect when replacing unsafe responses with refusals, sometimes eliminating even the safe parts of the response. An alternative approach combines both user prompts and model responses to moderation filtering
-                    <cite>
-                        Beavertails: Towards improved safety alignment of LLM via a human-preference dataset.
-                    </cite>
-                    ; however, it also depends on the model’s ability to generate safe responses.
-                </figcaption></center>
-            </figure>
-            <br>
-
-            <!-- <div class="mx-auto"> -->
-<!--                <left><p>The proposed framework that composes a "generator" and an ensemble of "scorers" through iterative consensus enables zero-shot generalization across a variety of multimodal tasks.</p></left>-->
-                
-            <!-- </div> -->
-            <!-- <div class="row">
-                    <div class="column4">
-                        <center><img class="card-img-top" src="materials/framework.png" style="width:400px"></center>
-                    </div>
-
-                    <div class="column4">
-                        <video width="400" loop autoplay muted>
-                            <source src="materials/teaser3.mp4" type="video/mp4">
-                        </video>
-                    </div>
-            </div>
- -->
-<!--            <div class="flex-row">-->
-<!--                <div class="mx-auto">-->
-<!--                    <left><p><b>Overview of the proposed unified framework.</b> Dashed lines are omitted for certain tasks. Orange lines represent the components used to refine the generated result.</p></left>-->
-<!--                    <br>-->
-<!--                    <center><img class="card-img-top" src="materials/framework.png" style="width:400px"></center>-->
-
-<!--                    <br><br>-->
-
-<!--                    &lt;!&ndash; <video width="800" loop autoplay muted style="border:1px solid black"> &ndash;&gt;-->
-<!--                    <video width="850" loop autoplay muted controls>-->
-<!--                        <source src="materials/new3-2.mp4" type="video/mp4">-->
-<!--                    </video>-->
-<!--                </div>-->
-
-<!--                <br><br>-->
-<!--                <p><b>Image generation: </b> A pre-trained diffusion model is used as the generator, and multiple scorers, such as CLIP and image classifiers, are used to provide feedback to the generator.</p>-->
-<!--                <p><b>Video question answering: </b> GPT-2 is used as the generator, and a set of CLIP models are used as scorers.</p>-->
-<!--                <p><b>Grade school math: </b> GPT-2 is used as the generator, and a set of question-solution classifiers are used as scorers.</p>-->
-<!--                <p><b>Robot manipulation: </b> MPC+World model is used as the generator, and a pre-trained image segmentation model is used to compute the scores from multiple camera views to select the best action.</p>-->
-
-<!--            </div>-->
- </section>
+        <div class="authors">
+            <p>Author Names</p>
+            <p>Affiliations</p>
+        </div>
+        <div style="height: 20px;"></div> <!-- 空行 -->
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <style>
+            .button-container {
+              display: flex;
+              flex-wrap: wrap; /* 自动换行 */
+              gap: 10px; /* 按钮之间的间距 */
+              justify-content: center; /* 居中对齐 */
+            }
         
-    <section id="interp">
-        <hr>
-        <h2>Aligner Interpretability</h2>
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-            <img src="./figures/intep_correction.png" style="width: 30%;">
-            <img src="./figures/intep_copy.png" style="width: 28.35%;">
-            <img src="./figures/intep_representation_control.png" style="width: 40%;">
-        </div>
-        <br>
-        <figcaption style="text-align: left;">
-            <strong>Interpretability of the <i>Aligner</i> module.</strong>
-            <br>
-            Interpretability experiment results on <i>Aligner</i>: <strong>(a)(b)</strong> The LAT scan graph of <i>Aligner</i>'s each layer when generating the first 20 output tokens for two given question-answer pairs. A higher value in the graph indicates a more active correction representation in that layer. Specifically, (a) exhibits raised activity, suggesting an enhanced correction action in the output, whereas (b) displays a tendency towards copying the original response. Moreover, the distinct differences between the two graphs are mainly observed in the early layers. This indicates that the decision regarding the degree of correction is made in the early layers of <i>Aligner</i>. <strong>(c)</strong> The control experiment shows the effectiveness of the extracted correction representation vector in modulating the <i>Aligner</i>'s correction behavior. The relationship between the Average Levenshtein Ratio and representation vector coefficients is approximately linear, with an \(R^2\) value of approximately 0.93.
-        </figcaption>
-    </section>
-
-    <section id="results">
-        <hr>
-        <h2>Results Overview</h2>
-            <figure class="mx-auto">
-                <center><img class="card-img-top" src="./figures/4in1_1209.jpg" style="width:950px"></center>
-                <br>
-                <figcaption style="text-align: left;">
-                    <strong>Distribution of helpfulness and harmlessness scores in training and evaluation sets. </strong>
-                    <br>
-                     <b>(a)</b> The distribution shift in answers and correctional answers in the training dataset; <br>
-                     <b>(b)</b> redistribution shift of <i>Aligner</i>-7B, based on upstream models such as GPT-4 (b1), Alpaca-7B (b2) and Llama2-70B-Chat (b3).<br> 
-                     Based on the figure, we found that:<br>
-                     <strong>(1)</strong> The correctional answer in the training dataset surpasses the original answers in terms of both helpfulness and harmlessness; <br>
-                     <strong>(2)</strong> The refuse-to-answer pattern of GPT-4 created an area of overcorrected answers where both helpful and harmless scores are low, and our <i>Aligner</i>-7B improved these answers by providing additional information and corrections. <br>
-                     <strong>(3)</strong> The Alpaca-7B model, which is not aligned, had its answers corrected by our <i>Aligner</i>-7B, significantly increasing both scores. <br>
-                     <strong>(4)</strong> The Llama2-70B-Chat model is already aligned (the average safety score is higher than the correction in the training dataset), and the correction of <i>Aligner</i>-7B enhanced the helpfulness significantly while maintaining the harmless score.<br>
-                     <strong>For detailed performance result of <i>Aligner</i> models, please refer to <a href="#detail">Detailed Results</a>.</strong>
-                </figcaption>
-            </figure>
-            <hr>
-            <br>
-            <!-- <div class="mx-auto" style="display: flex; justify-content: center; align-items: center;">
-                <img src="materials/test_gpt_4.gif" style="width: 450px; margin-right: 50px;">
-                <img src="materials/test_gpt_2.gif" style="width: 450px;">
-            </div> -->
-            <div class="mx-auto" style="display: flex; justify-content: center; align-items: center;">
-                <img src="./figures/test_gpt_4.gif" style="width: 550px">
-                <center><figcaption style="text-align: left;">
-                    <b>Distribution shift of helpful and harmless scores in the training process of <i>Aligner</i>-7B model</b><br>
-                     This figure shows the distribution shift of helpfulness and harmlessness scores in the evaluation of checkpoint models of our <i>Aligner</i>-7B model. In the training process, the model has quickly learned the correction pattern in a relatively short time, and the learning process exhibits strong transparency and parameter efficiency. 
-                </figcaption></center>
-            </div>
-            <br>
-    
-    </section> 
-
-    <section id="detail">
-        <hr>
-        <h2>Detailed Results</h2>
-            <br><br>
-            <!-- <figure class="mx-auto">
-                <center><img class="card-img-top" src="materials/table_2.jpg" style="width:750px"></center>
-                <br>
-                <figcaption style="text-align: left;">
-                    <b><i>Weak-to-strong generalization</i> results</b><br>
-                    The results demonstrate that <i>Aligner</i>-7B can achieve <i>weak-to-strong generalization</i> on 7B, 13B, and 70B upstream models with existing alignment methods using the labels given by the <i>Aligner</i>. This process entails enhancing the capabilities of a stronger model by finetuning it with labels generated from a weaker model.
-                </figcaption>
-            </figure>
-            <hr>
-            <br> -->
-            
-            <figure class="mx-auto">
-                <center><img class="card-img-top" src="./figures/warmup.jpg" style="width:950px"></center>
-                <br>
-                <figcaption style="text-align: left;">
-                    <b>Ablation Study: Different <i>Identity Mapping</i> Proportions</b><br>
-                    We first trained an identity <i>Aligner</i> for identity mapping, followed by extensive residual Q-A-C learning based on this <i>Aligner</i>. Specifically, we formed the Q-A-A dataset by extracting partial data from the training dataset in proportions of 2%, 10%, 20%, and 50%. The table presents our control experiments with a 50K training dataset, showing that extracting 20% of the data (<i>i.e.</i>, 10K dataset size) for initial constant identity training yields relatively better results.
-                </figcaption>
-            </figure>
-            <hr>
-            <br>
-
-            <!-- <div class="mx-auto" style="display: flex; justify-content: center; align-items: center;">
-                <img src="materials/test_gpt_4.gif" style="width: 450px; margin-right: 50px;">
-                <img src="materials/test_gpt_2.gif" style="width: 450px;">
-            </div> -->
-            <!-- <figure class="mx-auto">
-                <center><img class="card-img-top" src="materials/table_6.jpg" style="width:950px"></center>
-                <br>
-                <figcaption style="text-align: left;">
-                    <b>Performance of <i>Aligner</i> Models</b><br>
-                     It is shown that <i>Aligner</i> achieves significant performances in all the settings. All assessments in this table were conducted based on integrating various models with <i>Aligners</i> to compare with the original models to quantify the percentage increase in helpfulness and harmlessness. The background color represents the type of target language model: green represents API-based models, orange represents open-source models without safety alignment, and blue represents safety-aligned open-source models. The icon <i class="fas fa-lock" style="color: rgba(0, 0, 0, 0.7);"></i>  indicates the model parameters are not accessible and <i class="fas fa-shield-alt" style="color: rgba(0, 0, 0, 0.7);"></i>  indicates the model is safety-aligned. 
-                </figcaption>
-            </figure>
-            <hr>
-            <br> -->
-            
-            <figure class="mx-auto">
-                <center><img class="card-img-top" src="./figures/vs_cai.jpg" style="width:850px"></center>
-                <br>
-                <figcaption style="text-align: left;">
-                    Comparison to Self-Refine, Critique Methods<br>
-                    Constitutional AI (CAI) <cite>
-                        Constitutional ai: Harmlessness from ai feedback.
-                    </cite>, Self-Critique <cite>
-                        Self-critiquing models for assisting human evaluators
-                    </cite>, and Self-Refine <cite>
-                        Self-Refine: Iterative Refinement with Self-Feedback
-                    </cite>, primarily utilize the self-critiquing and refining capabilities of LLMs to enhance their performance. We employ CAI prompts solely during the inference time of LLMs to encourage self-revision of their answers. As demonstrated in the table above, our method, <i>Aligner</i>, outperforms the baseline considering both helpfulness and harmlessness dimensions. Additionally, baseline methods typically require multiple dialogue iterations and extended context windows for prompt insertion and ongoing self-correction. This could result in longer inference times and considerable consumption of context window length.
-                </figcaption>
-            </figure>
-            <hr>
-            <br>
-            
-            <figure class="mx-auto">
-                <center><img class="card-img-top" src="./figures/vs_rlhf.png" style="width:750px"></center>
-                <br>
-                <figcaption style="text-align: left;">
-                    Performance of <i>Aligner</i> on the Various Preference Datasets<br>
-                    To demonstrate the independence of <i>Aligner</i> from specific datasets, we utilized various open-source RLHF preference datasets. Specifically, we trained on HH-RLHF<cite>
-                        Training a helpful and harmless assistant with reinforcement learning from human feedback.
-                    </cite> ,PKU-SafeRLHF <cite>
-                        Beavertails: Towards improved safety alignment of LLM via a human-preference dataset.
-                    </cite><cite>
-                        Safe rlhf: Safe reinforcement learning from human feedback.
-                    </cite> and Utral-Feedback <cite>
-                        UltraFeedback: Boosting Language Models with Scaled AI Feedback
-                    </cite>
-                        datasets and compared <i>Aligner</i> with SFT, RLHF, and DPO. After fine-tuning Alpaca-7B with SFT, RLHF, and DPO, we compare these models against the original Alpaca-7B corrected by <i>Aligner</i>. The experiment results (as shown in the table above) indicate that <i>Aligner</i>'s performance in enhancing the original model's capabilities is comparable to, or exceeds, that of the baseline methods. Notably, models finetuned with RLHF or DPO tend to generate either conservative answers or fail to recognize dangers while adding helpful information explicitly. Importantly, training with RLHF or DPO methods requires optimizing significantly more models and consuming more training resources than just training an <i>Aligner</i>, <i>e.g.</i>, for a 70B model, DPO needs 11.25 times and RLHF 22.5 times more resources than <i>Aligner</i>. 
-                </figcaption>
-            </figure>
-    
-    </section> 
-
-    <section id="application">
-        <hr>
-        <h2>Applications</h2>
-        <!-- <p style="font-size: 23px;"><b></b></p> -->
-        <p style="font-size: 23px;"><strong> #1: Multi-round RLHF training via Aligner</strong></p>
-        <p style="font-size: 20px;"><b>New Multi-round Training Pipeline</b></p>
-        <p>As a data augmentation tool, <i>Aligner</i> can enhance the upstream model's response \(A\) into an improved response \(A^*\), thereby forming a synthetic preference dataset. This dataset can be used to further train the upstream model via RLHF/DPO. Repeating this process allows for multi-round RLHF or DPO.</p>
-        <figure class="mx-auto">
-            <center><img class="card-img-top" src="./figures/multi_round_pipeline.png" style="width:950px"></center>
-            <br>
-            <figcaption style="text-align: left;">
-                This paradigm brings many <b>advantages</b>:
-                <ul>
-                    <li>The <i>Aligner</i> inherits the feature of transferring from the dispreferred distribution to the preferred distribution in the preference dataset.</li>
-                    <li><i>Aligner</i> modifies the upstream model to produce better answers, bringing the distribution of resulting preference dataset closer to the answer distribution of the upstream model. This effectively mitigates the reward model collapse problem caused by out-of-distribution (OOD) preference datasets.</li>
-                    <li>The <i>Aligner</i> serves as a synthetic data generator, providing an efficient and repeatable method for constructing preference datasets.</li>
-                </ul>
-            </figcaption>
-        </figure>
-
-        <p style="font-size: 20px;"><b>Performance</b></p>
-        <figure class="mx-auto">
-            <center><img class="card-img-top" src="./figures/multi_round_performance.jpg" style="width:750px"></center>
-            <br>
-            <figcaption style="text-align: left;">
-                We conducted three rounds of RLHF and DPO on Alpaca2-7B using the three-round preference dataset from PKU-SafeRLHF. Following this, we trained three rounds of <i>Aligner</i>s with the same three-round preference datasets, which were then employed to refine the upstream model and generate new preference datasets. These synthetic preference datasets were subsequently used to fine-tune the upstream model. As illustrated in Figure above, the introduction of <i>Aligner</i>-corrected new preference datasets enabled the upstream model to improve both utility and safety simultaneously. In contrast, a typical multi-round RLHF/DPO pipeline only enhances utility, leaving the responses unsafe.
-            </figcaption>
-        </figure>
-
-        <p style="font-size: 23px;"><strong> #2: A New Alternative to Inference-time Intervention Methods</strong></p>
-        <p> We also conducted supplementary experiments with BoN and beam search as alternative inference-time intervention methods. <i>Aligner</i> continues to demonstrate superior performance compared to these approaches. </p>
-        <p style="font-size: 20px;"><b>Performance</b></p>
-        <figure class="mx-auto">
-            <center><img class="card-img-top" src="./figures/vs_bon.png" style="width:750px"></center>
-            <br>
-            <figcaption style="text-align: left;">
-                This table shows that <i>Aligner</i> consistently outperforms inference-time intervention methods such as BoN with N = 5 and N = 10, as well as <i>Beam Search (BS)</i>, across various settings. All assessments are conducted by integrating <i>Aligner</i> with different upstream models and then compare the results with upstream models inferenced using inference-time intervention methods <i>(X)</i> to measure the percentage increase in the <i>3H</i> standard.
-            </figcaption>
-        </figure>
-
-        <p style="font-size: 23px;"><strong> #3: Controllable Refinement</strong></p>
-        <p> <i>When refining the model's answer using <i>Aligner</i>, can providing feedback during the refinement process improve performance?</i></p>
-
-        <p> To explore this, we conduct a validation experiment where feedback is incorporated into <i>Aligner</i>'s refinement process. Rather than performing additional fine-tuning, we integrated specific prompts as feedback during <i>Aligner</i>'s refinement of the pre-aligned model's responses. In these experiments, <i>Aligner</i> was instructed to prioritize empathy, helpfulness, or harmlessness.</p>
-        <p style="font-size: 20px;"><b>Performance</b></p>
-        <figure class="mx-auto">
-            <center><img class="card-img-top" src="./figures/control_refinement.png" style="width:500px"></center>
-            <br>
-            <figcaption style="text-align: left;">
-                After evaluating on the BeaverTails and empathy datasets, we observed that the trained <i>Aligner</i> retained its instruction-following capabilities and showed metric improvements with the specific feedback provided.
-            </figcaption>
-        </figure>
-        <p>These experiments demonstrate that, once trained, <i>Aligner</i> can incorporate prompt-based feedback during refinement to achieve fine-grained adjustments. The above finding enhances <i>Aligner</i>'s versatility and applicability in real-world scenarios. By using prompts, we can guide <i>Aligner</i>'s refinement to achieve precise adjustments, such as in an Instruct-<i>Aligner</i> setup.</p>
-
-        <p style="font-size: 23px;"><strong>#4: Weak-to-Strong Correction via Aligner</strong></p>
-        <p>As AI systems reach human-level performance across various tasks and undertake increasingly complex activities that are hard for humans to grasp, it becomes progressively challenging to provide ongoing, reliable feedback and ensure that their behaviors align with human intentions. This brings forth the significant issue of the Superalignment problem: <em>How can we deliver supervisory signals to advanced AI systems and ensure they remain aligned with human goals?</em><cite> 
-            AI Alignment: a Comprehensive Survey
-        </cite><cite>
-            Concrete problems in AI safety.
-        </cite>. <em>Weak-to-strong generalization</em> is a training paradigm that leverages supervisor signals provided by weak models to enhance the performance of strong models. The weak to strong paper<cite>
-            Weak-to-strong generalization: Eliciting strong capabilities with weak supervision.
-        </cite> has conducted preliminary trials in NLP classification, chess puzzles, and reward modeling tasks, observing positive gains by simply fine-tuning strong pre-trained models using pseudo-labels produced by weak models. This paradigm is analogous to the concept of "teaching" where the weak model instructs the strong one.</p>
-
-        <p style="font-size: 20px;"><strong>Illustration of our pipeline</strong></p>
-        <figure class="mx-auto">
-            <center><img class="card-img-top" src="./figures/w2s_illustration.png" style="width:950px"></center>
-            <br>
-            <figcaption style="text-align: left;">
-                <strong>Left:</strong> With the input of user prompts, The weak to strong paper<cite>
-                    Weak-to-strong generalization: Eliciting strong capabilities with weak supervision.
-                </cite> directly uses a weak model to generate supervisory labels to fine-tune the strong model. <strong>Right (Ours):</strong> Based on both user prompts and the response from the strong model, the weak model (i.e., <i>Aligner</i>) generates an improved response, which can serve as labels for fine-tuning the strong model.
-            </figcaption>
-        </figure>
-
-        <p style="font-size: 20px;"><strong>Pipeline of Weak-to-Strong Correction</strong></p>
-        <figure class="mx-auto">
-            <center><img class="card-img-top" src="./figures/w2s_paradigm.png" style="width:550px"></center>
-            <br>
-            <figcaption style="text-align: left;">
-                <strong>Left:</strong> With the input of user prompts, The weak to strong paper<cite>
-                    Weak-to-strong generalization: Eliciting strong capabilities with weak supervision.
-                </cite> directly uses a weak model to generate supervisory labels to fine-tune the strong model. <strong>Right (Ours):</strong> Based on both user prompts and the response from the strong model, the weak model (i.e., <i>Aligner</i>) generates an improved response, which can serve as labels for fine-tuning the strong model.
-            </figcaption>
-        </figure>
-
-        <p style="font-size: 20px;"><strong>Performance</strong></p>
-        <figure class="mx-auto">
-            <center><img class="card-img-top" src="./figures/w2s_performance.png" style="width:750px"></center>
-            <br>
-            <figcaption style="text-align: left;">
-                The table above shows that the weak labels from <i>Aligner</i>-7B and <i>Aligner</i>-13B improve the performance of Llama2 series strong model in all scenarios when used for finetuning an upstream model via SFT. Additional observations are as follows:
-                <ul>
-                    <li>The RLHF and DPO methods significantly improve the upstream model's performance on certain metrics. However, they do not completely surpass the strong model's original capabilities, particularly regarding decreased helpfulness. This decline is due to these models' tendency to conservative patterns (i.e., qualitative answers with less informational content). This suggests that the two-stage learning process of reward modeling and policy optimization, compared to SFT's direct label-based mapping, may introduce more feature noise and information loss, making accurate optimization more challenging.</li>
-                    <li>The RLHF method outperforms the DPO method in general. Given that the training data for weak-to-strong generalization is based on the output from the upstream model, subsequently aligned by <i>Aligner</i>-7B. The RLHF method shows better performance in this semi-online setting.</li>
-                    <li>The safety improvement is more substantial than that in helpfulness. Safety is easier to assess compared to helpfulness and can more readily be enhanced through simple rejection.</li>
-                </ul>
-            </figcaption>
-        </figure>
-    </section>
-        <!-- <h2>Constraint Satisfaction</h2>
-            <br><br>
-            <div class="mx-auto">
-                <center><p><b>Combining Stacking Constraints</b></p></center>
-                <img class="card-img-top" src="materials/stack_1.gif" style="width:33%">
-                <img class="card-img-top" src="materials/stack_2.gif" style="width:33%">
-                <img class="card-img-top" src="materials/stack_3.gif" style="width:33%">
-            </div>
-            <div class="mx-auto">
-                <img class="card-img-top" src="materials/stack_caption.png" style="width:99%">
-            </div>
-            <br><br>
-            <div class="mx-auto">
-                <center><p><b>Combining Rearrangement Constraints</b></p></center>
-                <img class="card-img-top" src="materials/rearrange_1.gif" style="width:33%">
-                <img class="card-img-top" src="materials/rearrange_2.gif" style="width:33%">
-                <img class="card-img-top" src="materials/rearrange_3.gif" style="width:33%">
-            </div>
-            <div class="mx-auto">
-                <img class="card-img-top" src="materials/rearrange_caption.png" style="width:99%">
-            </div>
-            <br><br>
-            <div class="mx-auto">
-                <center><p><b>'NOT' constraints in Stacking and Rearrangement</b></p></center>
-                <center>
-                    <img class="card-img-top" src="materials/task_not_1.gif" style="width:33%">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <img class="card-img-top" src="materials/task_not_2.gif" style="width:33%">
-                </center>
-            </div>
-            <div class="mx-auto">
-                <center>
-                <img class="card-img-top" src="materials/not_constraint_caption.png" style="width:85%">
-                    </center>
-            </div>
-            <br><br>
-            <div class="mx-auto">
-                <center><p><b>Infeasible constraints lead to incoherent behavior</b></p></center>
-                <center>
-                    <img class="card-img-top" src="materials/task_infeasible.gif" style="width:33%">
-                </center>
-            </div>
-            <div class="mx-auto">
-                <center>
-                <img class="card-img-top" src="materials/infeasible_caption.png" style="width:38%">
-                </center>
-            </div>
-        <hr>
-
-        <h2>Skill Composition</h2>
-            <br><br>
-            <div class="mx-auto">
-                <center><p><b>Individual Quadruped Gaits</b></p></center>
-                <img class="card-img-top" src="materials/trott.gif" style="width:33%">
-                <img class="card-img-top" src="materials/pace.gif" style="width:33%">
-                <img class="card-img-top" src="materials/bound.gif" style="width:33%">
-            </div>
-            <div class="mx-auto">
-                <img class="card-img-top" src="materials/skill_caption.png" style="width:99%">
-            </div>
-            <br><br>
-            <div class="mx-auto">
-                <center><p><b>Composing Quadruped Gaits</b></p></center>
-                <img class="card-img-top" src="materials/trott_pace.gif" style="width:33%">
-                <img class="card-img-top" src="materials/bound_pace.gif" style="width:33%">
-                <img class="card-img-top" src="materials/trott_bound.gif" style="width:33%">
-            </div>
-            <div class="mx-auto">
-                <img class="card-img-top" src="materials/skill_compose_caption.png" style="width:99%">
-            </div>
-            <br><br>
-            <div class="mx-auto">
-                <center><p><b>Naive Skill Composition via sum of conditioning variables</b></p></center>
-                <img class="card-img-top" src="materials/trott_pace_cond.gif" style="width:33%">
-                <img class="card-img-top" src="materials/bound_pace_cond.gif" style="width:33%">
-                <img class="card-img-top" src="materials/trott_bound_cond.gif" style="width:33%">
-            </div>
-            <div class="mx-auto">
-                <img class="card-img-top" src="materials/skill_compose_caption.png" style="width:99%">
-            </div>
-            <br><br><br>
-        <hr>
-
-    </section>
-
-
-    <section id="paper">
-        <h2>Team</h2>        
-        <div class="row">
-            <div class="column5">
-                <a href='https://anuragajay.github.io/'>
-                    <img src=./materials/people/aajay2.png class="figure-img img-fluid rounded-circle" height=200px width=200px>
-                </a>
-                <p class=profname>Anurag Ajay</p>
-                <p class=institution>MIT</p>
-            </div>
-
-            <div class="column5">
-                <a href='https://yilundu.github.io/'>
-                    <img  src=./materials/people/yilun3.png class="figure-img img-fluid rounded-circle" height=200px width=200px>
-                </a>
-                <p class=profname> Yilun Du </p>
-                <p class=institution>MIT</p>
-            </div>
-
-            <div class="column5">
-                <a href='https://scholar.google.com/citations?user=ynyPc1kAAAAJ&hl=en'>
-                    <img  src=./materials/people/abhi2.png class="figure-img img-fluid rounded-circle" height=200px width=200px>
-                </a>
-                <p class=profname> Abhi Gupta </p>
-                <p class=institution>MIT</p>
-            </div>
-
-            <div class="column5">
-                <a href='https://scholar.google.com/citations?user=rRJ9wTJMUB8C&hl=en'>
-                    <img  src=./materials/people/josh2.jpg class="figure-img img-fluid rounded-circle" height=200px width=200px>
-                </a>
-                <p class=profname> Joshua Tenenbaum </p>
-                <p class=institution>MIT</p>
-            </div>
-
-            <div class="column5">
-                <a href='http://people.csail.mit.edu/tommi/'>
-                    <img  src=./materials/people/tommi2.png class="figure-img img-fluid rounded-circle" height=200px width=200px>
-                </a>
-                <p class=profname> Tommi Jaakkola </p>
-                <p class=institution>MIT</p>
-            </div>
-
-            <div class="column5">
-                <a href='http://people.csail.mit.edu/pulkit/'>
-                    <img  src=./materials/people/pulkit.jpeg class="figure-img img-fluid rounded-circle" height=200px width=200px>
-                </a>
-                <p class=profname> Pulkit Agrawal </p>
-                <p class=institution>MIT</p>
-            </div>
-    </section>
-   
-    <section id="bibtex">
-        <h2>Bibtex</h2>
-        <div class="page-body"><pre id="ad6975be-3353-467d-ae48-6313d767ffa6" class="code"><code>
-            @inproceedings{
-                ajay2023is,
-                title={Is Conditional Generative Modeling all you need for Decision Making?},
-                author={Anurag Ajay and Yilun Du and Abhi Gupta and Joshua B. Tenenbaum and Tommi S. Jaakkola and Pulkit Agrawal},
-                booktitle={The Eleventh International Conference on Learning Representations },
-                year={2023},
-                url={https://openreview.net/forum?id=sP1fo2K9DFG}
-            }    
-        </code></pre><p id="1a3aa306-c4b8-4872-8fb0-411495c73d55" class="">
-        </p></div> -->
-
-    
-
-
-    <section id="qa">
-        <hr>
-        <h2>FAQ</h2>
-        <div class="flex-row">
-            <!-- <p>
-                <b>Question #1: Why can the Correction training paradigm of Aligner be successful and surpass the performance of SFT?</b>
-                <br>
-                <br>
-                <figure class="mx-auto">
-                    <center><img src="materials/structure_0201_v1.jpg" class="card-img-top" style="width: 550px"></center>
-                </figure>
-                <br>
-                <br>
-                As illustrated in the above diagram, SFT directly maps a query's semantic space to an answer's semantic space (Answer), a process known as cross-domain mapping. This process depends on the base model being already trained to infer and model various semantic spaces. Furthermore, directly learning this mapping poses significant challenges. Conversely, Aligner creates a mapping from the Answer's semantic space to the Correction Answer's semantic space (a better answer). Since these two semantic spaces are closer in distribution, the Aligner training paradigm can be considered a form of residual learning (Residual Correction). Furthermore, we derive data in varying proportions from the Q-A-C training dataset to create Q-A-A data, used for training an Aligner in identity mapping (referred to as the warm-up step). Subsequently, using this Aligner, we train with the entire Q-A-C training dataset. We observe that with a 50K dataset, optimum performance is achieved when the warm-up proportion is 20%; deviations from this proportion negatively affect Aligner's performance. Additionally, aligners subjected to the warm-up training strategy typically outperform those trained directly with the full dataset without a warm-up phase. Beyond the alignment field, ResNet similarly employs this concept to address accuracy decline and convergence challenges associated with increasing neural network depth.
-
-            </p> -->
-            <details>
-                <summary style="font-size: 18px;"><b>Question #1: <i>Aligner vs.</i> SFT/RLHF/Prompt Engineering.</b></summary>
-                <figure class="mx-auto">
-                    <center><img src="materials/Tab1_cap.jpg" class="card-img-top" style="width: 950px"></center>
-                </figure>
-                <br>
-                <b><i>Aligner vs.</i> SFT:</b><br>
-                As illustrated in the Figure1 below, SFT directly creates a cross-domain map from Query semantic space to Answer semantic space. This process depends on the upstream model to infer and model various contexts in the semantic space, which is much harded than learning the correction signals. This is how we creat the "copy + correct" paradigm in <i>Aligner</i>. <i>Aligner</i> essentially creates a mapping from the Answer's semantic space to the Correction Answer's semantic space. We found that these two semantic spaces are closer in distribution, the <i>Aligner</i> training paradigm can be considered a form of residual learning (Residual Correction). Moreover, we derive data in varying proportions from the Q-A-C training dataset to create Q-A-A data, and used this Q-A-A data to train an <i>Aligner</i> in identity mapping (referred to as the warm-up step). Based on this, we then train with the entire Q-A-C training dataset. We observe that with a 50K dataset, the optimum performance is achieved when the warm-up proportion is 20%. Additionally, <i>Aligner</i>s subjected to the warm-up training strategy typically outperform those trained directly with the full dataset without a warm-up phase. At a very high level, ResNet also employed this concept of copy with residual to address the training challenges associated with the increasing neural network depth.
-                <br>
-                <figure class="mx-auto">
-                    <center><img src="materials/Fig1_cap.jpg" class="card-img-top" style="width: 550px"></center>
-                </figure>
-                <br>
-                <br>
-                <b><i>Aligner vs.</i> RLHF:</b>
-                <br>
-                <i>Aligner</i> achieves alignment without relying on Reinforcement Learning from Human Feedback (RLHF) 
-                <cite>
-                    Training language models to follow instructions with human feedback.
-                </cite>
-                . RLHF utilizes pre-collected human preference data to train a reward model. The reward model provides signals to RL algorithms like PPO 
-                <cite>
-                    Proximal policy optimization algorithms.
-                </cite>
-                , guiding the optimization of the model's behavior to align more closely with human expectations. However, RLHF poses significant challenges in practical applications, especially in parameter tuning and its fluctuating effects, complicating the alignment of LLMs 
-                <cite>
-                    Training language models to follow instructions with human feedback.
-                </cite>
-                <cite>
-                    Safe rlhf: Safe reinforcement learning from human feedback.
-                </cite>
-                <cite>
-                    Llama 2: Open foundation and fine-tuned chat models.
-                </cite>
-                . Specifically, the reward model's task of mapping human preference data from discrete to continuous numerical space for optimization presents challenges in training methods and robustness. Unlike sequence-to-sequence (Seq2Seq) models with robust generalization in text space, numerical models such as reward models exhibit weaker text space generalization, contributing to RLHF's instability. <i>Aligner</i> introduces a new alignment paradigm, training a Seq2Seq model to identify the differences (residuals) between aligned and misaligned answers. <i>Aligner</i> offers several significant advantages over RLHF:
-                <p style="text-indent: 40px;">
-                    <b>1.<i>Aligner</i> achieves noticeable alignment with less training data.</b> For instance, with 50K training data, <i>Aligner</i> trained a 7B model, enhancing GPT-4's helpfulness by 19% and safety by 26%, and boosting Vicuna 33B's helpfulness and safety by 51% and 56%, respectively. 
-                </p>
-                <p style="text-indent: 40px;">
-                    <b>2.<i>Aligner</i> offers a simpler training process.</b> It trains a Seq2Seq model for alignment, a more straightforward and manageable process than RLHF's complex reward model learning and RL fine-tuning. RLHF's engineering tuning intricacies and the inherent instability and hyperparameter sensitivity of RL algorithms make its implementation challenging, while <i>Aligner</i>'s simplified approach substantially reduces complexity. 
-                </p>
-                <p style="text-indent: 40px;">
-                    <b>3.Unlike RLHF, <i>Aligner</i> does not require access to model weights.</b> While RLHF is effective in model alignment, it depends on direct model training. The applicability of RLHF is limited with non-open-source API-based models and their specific downstream task fine-tuning requirements. In contrast, <i>Aligner</i> does not require direct manipulation of the model's original parameters. <i>Aligner</i> externalizes alignment needs to an independent module, offering a flexible method. 
-                </p>
-                <p style="text-indent: 40px;">
-                    <b>4.<i>Aligner</i> is not limited by model type.</b> Under RLHF, fine-tuning different models like Llama2 
-                    <cite>
-                        Llama 2: Open foundation and fine-tuned chat models.
-                    </cite>
-                    , Alpaca 
-                    <cite>
-                        Stanford alpaca: An instruction-following llama model.
-                    </cite>
-                    , or Vicuna 
-                    <cite>
-                        Vicuna: An open-source chatbot impressing gpt-4 with 90% chatgpt quality.
-                    </cite>
-                    requires re-collecting preference data and adjusting training parameters in the reward model training and RL phase. <i>Aligner</i> supports any model's alignment with just one-time training. For instance, one-time <i>Aligner</i> training in research improved helpfulness and safety for 11 different models, showcasing its wide generalization capabilities.
-                </p>
-                <p style="text-indent: 40px;">
-                    <b>5.<i>Aligner</i> offers greater flexibility in training resource requirements.</b> Fine-tuning a 70B model using RLHF demands significant computing resources, often needing hundreds of GPU cards. Specifically, RLHF requires loading not just the 70B parameter target model, but also additional reward, Actor, and Critic models with similar parameter sizes. Consequently, RLHF consumes more computing resources per unit time than pre-training. In contrast, <i>Aligner</i>'s training strategy is more flexible, enabling users to select the scale of <i>Aligner</i> training based on their available computing resources. For instance, to align a 70B model, users can choose from various <i>Aligner</i> model scales, like 7B, 13B, or 70B, based on available resources. This flexibility reduces the overall demand for computing resources and enables efficient alignment even with limited resources. Thus, <i>Aligner</i>, adaptable in its training resource requirements, offers an effective, practical strategy for large-scale model alignment, providing various options for users or researchers under different resource constraints.
-                </p>
-                <br>
-                <b><i>Aligner vs. </i> Prompt Engineering (i.e. Self-Correction):</b><br>
-                Prompt Engineering is a widely used method to boost large language models' capabilities, but it faces several significant issues: 1.Designing prompts is challenging, requiring distinct designs for various models, and the effectiveness hinges on each model's capabilities. If a model's abilities fall short for a task, multiple iterations might be required. 2.This approach wastes the context window, as small models' limited context affects performance and overly long contexts hike costs for large models. In contrast, <i>Aligner</i> achieves goals in one step and is not limited by model type. With just one-time training, <i>Aligner</i> supports the alignment of any model. For example, research shows that one-time <i>Aligner</i> training enhanced helpfulness and safety across 11 different models, demonstrating its broad generalization capabilities. Moreover, <i>Aligner</i> saves the precious context window. Additionally, combining it with Prompt Engineering can yield better results. Specifically, we use prompt in CAI.
-                <br>
-                <br>
-                <!-- <b>Further Details are shown in Table 1 below.</b> -->
-                
-
-            </details>
-            <br>
-            <details>
-                <summary style="font-size: 18px;"><b>Question #2: How does the correction paradigm work in <i>Aligner</i> and why it outperforms SFT?</b></summary>
-                <br>
-                <figure class="mx-auto">
-                    <center><img src="materials/Tab5_cap.jpg" class="card-img-top" style="width: 550px"></center>
-                </figure>
-                <b>From the perspective of mechanism,</b> the training strategy of <i>Aligner</i> satisfies the primary hypothesis: <span class="red-bold-italic" >Correction is generally easier than generation</span>, which makes the Q-A-C (Query-Answer-Correction) training mechanism adopted by <i>Aligner</i> easier to fit the distribution patterns in the training data. Our <i>Aligners</i> are trained in the following mechansim: we first establishes an identity mapping mechanism from Q-A to A, then conducted a residual mapping learning method for Q-A-C. This method is superior to directly training the model to generate responses. Compared to traditional cross-domain mapping (Applied in SFT) from query space to answer space, the correction mechanism establishes an intra-domain mapping between Answer and Correction Answer, producing responses that are superior to direct answer generation. ResNet 
-                <cite>
-                    Deep residual learning for image recognition.
-                </cite>
-                 also uses a similar approach to mitigate the accuracy decline and convergence difficulties caused by increased neural network depth.
-                <br>
-                <br>
-                <b>From the perspective of performance,</b> SFT will, to some extent, alter the capabilities and knowledge of the front-end model, potentially reducing the helpfulness of its outputs. The <i>Aligner</i> makes the alignment task independent of the upstream model,  allowing it to preserve the knowledge and performance of the front-end  model without negative impact. Simultaneously, for originally well-formulated answers, the <i>Aligner</i> aims to either maintain the original response or enhance it with more  helpful details, which will enhance the helpfulness of original answer.
-                <br> 
-                <br>
-            </details>
-            <br>
-            <details>
-                <summary style="font-size: 18px;"><b>Question #3: <i>Aligner</i> shows significant improvement on GPT-4, does it involve potential data leakage problems? </b></summary>
-                <br>
-                Given the concern about data leakage, we handled the training and evaluation data with utmost care and caution. Multiple checks were performed for duplicates between the evaluation and training dataset prompts to ensure no leakage of evaluation data. 
-                <br>
-                <br>
-                Specifically, we initiate our dataset creation process by conducting query deduplication on sources, e.g., the Stanford Alpaca 
-                <cite><a href="https://huggingface.co/datasets/tatsu-lab/alpaca" target="_blank">
-                    https://huggingface.co/datasets/tatsu-lab/alpaca
-                </a></cite>
-                , user-shared conversations from ShareGPT 
-                <cite><a href="https://sharegpt.com/" target="_blank">
-                    https://sharegpt.com/
-                </a></cite>
-                , HH-RLHF 
-                <cite><a href="https://huggingface.co/datasets/Anthropic/hh-rlhf" target="_blank">
-                    https://huggingface.co/datasets/Anthropic/hh-rlhf
-                </a></cite>
-                 and others. We finally get a set of 27K queries for the following training dataset creation. Subsequently, we use various open-source models e.g., Alpaca-7B, Vicuna-(7B,13B), Alpaca2-(7B,13B) 
-                 <cite>
-                    We fine-tuned Llama2-(7B,13B) using Stanford Alpaca's 52K dataset to get models that only have instruction-following capability without safety alignment, namely Alpaca2-(7B,13B).
-                 </cite>
-                 , and Llama2-(7B,13B)-Chat  to generate responses to these queries, yielding the following data statistics: Following quality filtering and duplicate removal, we ultimately obtain a Query-Answer dataset of 57K pairs for subsequent correction-answer annotation. Finally, we use GPT-4, Human and larger models to annnotate correction answer. 
-                <br>
-                <br>
-                Our evaluation dataset includes selections from BeaverTails 
-                <cite>
-                    Beavertails: Towards improved safety alignment of LLM via a human-preference dataset.
-                </cite>
-                 and HarmfulQA 
-                 <cite>
-                    Red-Teaming Large Language Models using Chain of Utterances for Safety-Alignment.
-                 </cite>
-                 , among which BeaverTails has been accepted by NeurIPS2023 and HarmfulQA has been widely used by community. Particularly, before confirming the final dataset used for evaluation,  we conducted a duplication screening and search of the prompts used for  evaluation against the prompts in the training dataset, ensuring there  were no duplicate data, thereby avoiding the issue of data leakage.
-                <br>
-                <br>
-                Our training code has already been open-sourced. Subsequently, we will open-source both complete datasets and various scaled versions of the <i>Aligner</i> model after review for community use and verification.
-                <br> 
-                <br>
-            </details>
-            <br>
-            <details>
-                <summary style="font-size: 18px;"><b>Question #4: The training data contain GPT-4 annotations, why does <i>Aligner</i> still improve the GPT-4?</b></summary>
-                <br>
-                From a mechanistic perspective, the training mechanism of <i>Aligner</i> satisfies the primary hypothesis: <span class="red-bold-italic" >Correction is generally easier than generation</span>, which makes the Q-A-C (Query-Answer-Correction) training mechanism adopted by <i>Aligner</i> easier to fit the distribution patterns in the training data. Our <i>Aligner</i>s are trained in the following mechansim: we first establishes an identity mapping mechanism from Q-A to A, then conducted a residual mapping learning method for Q-A-C. This method is superior to directly training the model to generate responses. Compared to traditional cross-domain mapping from query space to answer space, the correction mechanism establishes an intra-domain mapping between Answer and Correction Answer, producing responses that are superior to direct answer generation. This is consistent with the ideas of baseline methods like Constitutional AI 
-                <cite>
-                    Constitutional ai: Harmlessness from ai feedback.
-                </cite>
-                , and outside the alignment field, ResNet 
-                <cite>
-                    Deep residual learning for image recognition.
-                </cite>
-                also uses a similar approach to mitigate the accuracy decline and convergence difficulties caused by increased neural network depth.
-                <br>
-                <br>
-                From the perspective of results, GPT-4, as an API-based mode that has undergone safety alignment, will generative more conservative responses [3,4,5]. Since learning refusal response pattern is more accessible than learning to generate safe responses with more helpful information, LLMs that have undergone safety alignment all have the above problem. In constrast, by learning the redisual gap between correction answer and unaligned answer, <i>Aligner</i> tend to provide as much as helpful information as possible without generating toxic outputs. This also demonstrates the <i>Aligner</i>'s potential as new paradigm for alignment. Additionally, for already safe responses from GPT-4, our <i>Aligner</i> can add more specific details, further enhancing the helpfulness of the original response.
-                <br>
-                <br>
-	        </details>
-            <br>
-            <details>
-                <summary style="font-size: 18px;"><b>Question #5: How does the <i>Weak-to-Strong generalization</i> work through <i>Aligner</i>?</b></summary>
-                <figure class="mx-auto">
-                    <center><img src="tables/tab4_w2s.png" class="card-img-top" style="width: 950px"></center>
-                </figure>
-                <figure class="mx-auto">
-                    <center><img src="images/w2s_illustration.png" class="card-img-top" style="width: 550px"></center>
-                </figure>
-                <br>
-                <br>
-                <i>Weak-to-Strong generalization </i>
-                <cite>
-                    Weak-to-strong generalization: Eliciting strong capabilities with weak supervision.
-                </cite>
-                 explores whether training a strong model with weak model labels can enhance its performance. OpenAI's approach plays a significant role in addressing the SuperAlignment problem 
-                 <cite>
-                    Concrete problems in AI safety.
-                 </cite>
-                  . During the training process, a weak model is initially trained with ground truth data. For instance, in text classification tasks, the dataset is split into two: the first half, consisting of input and ground truth, trains the weak model; the second half retains only the input, using labels generated by the weak model (the weak labels). During this training, the strong model receives supervision solely from the weak labels generated by the weak model. Training the weak model with ground truth equips it to tackle corresponding tasks; however, the inputs for generating weak labels differ from those used in training. 
-                <br>
-                <br>
-                Figure 3 illustrates our novel perspective on the <i>weak-to-strong generalization</i>. Our <i>Aligner</i> acts as a "Supervisor standing on the shoulders of giants." In contrast to OpenAI's direct supervision of "giants," our <i>Aligner</i> is composed with larger model, offering more accurate labels for training stronger models, namely <i>weak-to-strong</i> correction. In the <i>Aligner</i>'s training process, correction data are annotated by GPT-4, human annotators, and larger models as training labels, which is consistent with OpenAI paradigm . Subsequently, we use <i>Aligner</i> to generate weak labels (i.e., Corrections) on a new Q-A dataset. These labels serve as supervision signals to train larger models, leading to further improvements, as Table 2 demonstrates.
-                <br>
-                <br>
-            </details>
-            <br>
-            <details>
-                <summary style="font-size: 18px;"><b>Question #6: Is it possible to put multiple <i>Aligners</i> together?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <br>
-                </b></summary>
-                
-                <br>
-                <i>Aligners</i>, being stackable, enable the iteration from <i>weak-to-strong generalization</i>. In this process, a layer of <i>Aligner</i> functions as an amplifier. Subsequently, the weak label generated by this <i>Aligner</i> is utilized for SFT training, specifically during the distillation step. In fact, before the distillation step, nesting multiple layers of <i>Aligners</i> can shift the distribution of the original answer towards the Correction Distribution, leading to improved effects.
-                <br>
-                <br>
-                Simultaneously, <i>Aligner</i> offers a potential framework for Iterated Distillation and Amplification (IDA)
-                <cite>
-                    Supervising strong learners by amplifying weak experts.
-                </cite>
-                , as illustrated in Figure 7 below. The <i>Aligner</i> can serve as an Amplifier to enhance the model post-distillation, with the enhanced output being suitable for further distillation. The experimental results are presented in Table 18 below. Regarding helpfulness and harmlessness, this IDA implementation showed iterative progress in harmlessness, but a decline in helpfulness. This trend is attributed to the model's conservative output during distillation, a result of information loss, yet the framework remains promising for IDA implementation. Future efforts will concentrate on enhancing distillation efficiency and broadening the scope of <i>Aligner</i> applications.   
-                <figure class="mx-auto">
-                    <center><img src="materials/Fig7_cap.jpg" class="card-img-top" style="width: 950px"></center>
-                </figure>
-                <figure class="mx-auto">
-                    <center><img src="materials/Tab18_cap.jpg" class="card-img-top" style="width: 950px"></center>
-                </figure>             
-                <br>
-                <br>
-	        </details>
-            <br>
-            <details>
-                <summary style="font-size: 18px;"><b>Question #7: Why we care only about LLM's helpfulness and harmlessness? Does <i>Aligner</i> work in any other aspects?</b></summary>
-                When measuring the alignment of LLMs with human values and intentions, one of the widely accepted criteria is the 3H principles (Helpful, Harmless, Honest) 
-                <cite>
-                    Training a helpful and harmless assistant with  reinforcement learning from human feedback.
-                </cite>
-                .However,  the evaluation of honesty is more challenging. Therefore, we chose two widely accepted dimensions for evaluation: Helpfulness and Harmlessness. We selected datasets from two published works: Beavertails
-                <cite>
-                    Beavertails: Towards improved safety alignment of LLM via a human-preference dataset.
-                </cite>
-                and HarmfulQA 
-                <cite>
-                    Red-Teaming Large Language Models using Chain of Utterances for Safety-Alignment.
-                </cite>
-                as our evaluation datasets. Beside our paper, many classic works such as InstructGPT 
-                <cite>
-                    Training language models to follow instructions with human feedback.
-                </cite>
-                , Constitutional AI 
-                <cite>
-                    Constitutional ai: Harmlessness from ai feedback.
-                </cite>
-                and SafeRLHF 
-                <cite>
-                    Safe rlhf: Safe reinforcement learning from human feedback.
-                </cite>
-                also adopted these two dimensions of Helpfulness and Harmlessness for evaluation.
-                <br>
-                <br>
-                Meanwhile, we explored and verified the consistency between GPT-4 assessments and human assessments. In this process, GPT-4 made preliminary partial-order judgments on responses A and B based on given prompts, and provided detailed reasoning. Based on this, our annotation team conducted a secondary verification to ensure the accuracy of the evaluation results. In addition, we specifically designated quality inspectors to spot-check the evaluation process to ensure the high standards and reliability of the evaluation results.
-                <br>
-                <figure class="mx-auto">
-                    <center><img src="materials/Tab3_nocap.jpg" class="card-img-top" style="width: 950px"></center>
-                </figure>
-                <br>
-                We further validated <i>Aligner</i>'s ability to incorporate other to-align aspects. Following the design of Empathetic Dialogue dataset 
-                <cite>
-                    Towards Empathetic Open-domain Conversation Models: a New Benchmark and Dataset.
-                </cite>
-                , we selected a 4K training set and a 1.5K test set from its public available dataset (ensuring the dataset is used appropriately and is free of leakage). We utilized the train set to perform finetune on <i>Aligner</i>-7B and <i>Aligner</i>-13B to enhance their empathetic abilities. The fine-tuned Empathy-<i>Aligner</i>-7B and Empathy-<i>Aligner</i>-13B were not only able to improve the empathetic capacity of more than 50% of GPT-4's responses, significantly surpassing the original <i>Aligner</i> model, but also saw an improvement in helpfulness after finetuning. Detailed experimental results are shown in the Table 16 above. This experiment demonstrates the <i>Aligner</i> models' outstanding capabilities in other domains and the low cost and high efficiency of adding features to <i>Aligners</i>. Detailed information can be found in the paper Appendix C.5.
-                <br>
-                <br>
-	        </details>
-            <br>
-            <details>
-                <summary style="font-size: 18px;"><b>Question #8: Potential research directions and applications based on <i>Aligner.</i></b></summary>
-                <br>
-                <i>Aligner</i>, as a novel alignment method, possesses significant research potential. For instance, <i>Aligner</i> can be applied in the following scenarios:Application of <i>Aligner</i> in multi-turn dialogue scenarios. In this context, the challenge of sparse rewards is particularly significant. In question-and-answer (QA) dialogues, scalar supervision signals are typically obtained only after the dialogue concludes. This sparsity issue becomes more pronounced in multi-turn dialogues, like continuous QA scenarios, where RLHF is less effective. Investigating <i>Aligner</i>'s potential in enhancing alignment in multi-turn dialogues represents a valuable research area.
-                <br>
-                <br>
-                <b>1.</b> Aligning human values with reward models poses a significant challenge in the multi-stage process of building reward models based on human preferences and fine-tuning LLMs, particularly in ensuring the alignment of LLMs with specific human values like fairness and empathy. Delegating the value alignment task to an external <i>Aligner</i> module and training it with specific corpora offers a novel approach to value alignment. It also enables the <i>Aligner</i> to modify the outputs of preceding models to better reflect specific values.
-                <br>
-                <br>
-                <b>2.</b>Streamlining and parallel processing of <i>Aligner</i> (MoE <i>Aligner</i>) is a promising direction. Specializing and integrating <i>Aligners</i> in various directions can lead to a more powerful and comprehensive MoE <i>Aligner</i>, fulfilling a range of mixed safety and value alignment needs. Additionally, enhancing the parallelism of <i>Aligner</i> to reduce inference time loss represents another viable direction.
-                <br>
-                <br>
-                <b>3.</b>Integration during model training involves incorporating an <i>Aligner</i> layer after certain weight layers, enabling real-time intervention in model outputs during training. This method not only enhances alignment efficiency but also optimizes the model training process, leading to more effective model alignment.
-                <br>
-                <br>
-                <b>4.</b>Since <i>Aligner</i> is insensitive to model agnostic parameters, a potential application of <i>Aligner</i> is as a Safety Layer and a patch for LLMs. Just like a security butler in a computer operating system, <i>Aligner</i> can act as the "security butler" for LLMs, correcting dangerous and unsafe content in the output of LLMs in a timely manner, applying patches to ensure the normal use of the system. Compared to SFT, <i>Aligner</i> does not affect the performance of the preceding model, is plug-and-play, and consumes fewer training resources, making it more feasible than SFT.
-                <br>
-
-	        </details>
-            <br>
-        </div>
-    </section>
-
-<!-- 
-    <section id="paper">
-        <h2>Paper</h2>
-        <hr>
-        <div class="flex-row">
-            <div class="download-thumb">
-            <div style="box-sizing: border-box; padding: 16px; margin: auto;">
-                <a href="https://energy-based-model.github.io/composing-pretrained-models/"><img class="screenshot" src="materials/thumb_finger.png"></a>
-            </div>
-        </div>
-            <div class="paper-stuff">
-                <p><b>Composing Ensembles of Pre-trained Models via Iterative Consensus</b></p>
-                <p>Shuang Li, Yilun Du, Joshua B. Tenenbaum, Antonio Torralba, Igor Mordatch</p>
-                <div><span class="material-icons"> description </span><a href="https://arxiv.org/abs/2210.06978"> arXiv version</a></div>
-                <div><span class="material-icons"> integration_instructions </span><a href="https://github.com/nv-tlabs/LION"> Code</a></div>
-            </div>
-            </div>
-        </div>
-    </section>
-
- -->
-
-    <!-- <section id="bibtex">
-        <h2>Citation</h2>
-        <hr>
-        <pre><code>@inproceedings{zeng2022lion,
-            title={LION: Latent Point Diffusion Models for 3D Shape Generation},
-            author={Xiaohui Zeng and Arash Vahdat and Francis Williams and Zan Gojcic and Or Litany and Sanja Fidler and Karsten Kreis},
-            booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
-            year={2022}
-        }</code></pre>
-    </section> -->
-
-
-    <hr>
-    <div id="citations">
+            .button {
+              display: flex;
+              flex-direction: column; /* 图标和文字上下排列 */
+              align-items: center; /* 水平居中 */
+              justify-content: center; /* 垂直居中 */
+              width: 100px; /* 固定宽度 */
+              height: 60px; /* 固定高度 */
+              text-decoration: none; /* 去掉下划线 */
+              background-color: #E8F9FF; /* 按钮背景颜色 */
+              color: #FBFBFB; /* 文本颜色 */
+              border-radius: 8px; /* 圆角 */
+              font-size: 16px; /* 文字大小 */
+              font-family: Arial, sans-serif; /* 字体 */
+              transition: transform 0.2s ease, background-color 0.2s ease; /* 动画效果 */
+            }
         
-        <ul id="footnotes-list">
-            <!-- 脚注内容将添加到这里 -->
-        </ul>
+            .button:hover {
+              background-color: #4F75FF; /* 悬停背景颜色 */
+            color: #FBFBFB ;
+              transform: scale(1.05); /* 悬停放大效果 */
+            }
+        
+            .material-icons {
+              font-size: 24px; /* 图标大小 */
+              margin-bottom: 5px; /* 图标和文字之间的间距 */
+            }
+          </style>
+        </head>
+        <body>
+          <div class="button-container">
+            <a class="button" href="assets/Aligner.pdf" target="_blank">
+              <span class="material-icons">description</span>
+              paper
+            </a>
+            <a class="button" href="https://github.com/PKU-Alignment/aligner" target="_blank">
+              <span class="material-icons">code</span>
+              github
+            </a>
+            <a class="button" href="https://huggingface.co/datasets/aligner/aligner-20K" target="_blank">
+              <span class="material-icons">folder</span>
+              data
+            </a>
+            <a class="button" href="https://huggingface.co/aligner/aligner-7b-v1.0" target="_blank">
+              <span class="material-icons">download</span>
+              model
+            </a>
+            <a class="button" href="#qa">
+              <span class="material-icons">quiz</span>
+              FAQ
+            </a>
+          </div>
+        
+        <div class="abstract">
+            <h2>Abstract</h2>
+            <p>Training multi-modal large language models (MLLMs) that align with human intentions is a long-term challenge. Traditional score-only reward models for alignment suffer from low accuracy, weak generalization, and poor interpretability, blocking the progress of alignment methods, <i>e.g.,</i> reinforcement learning from human feedback (RLHF). This paper introduces Generative RLHF-V, a novel alignment framework that integrates Generative Reward Models (GRMs) with multi-modal RLHF. We propose a two-stage pipeline: <b>generative reward modeling from multi-model preference</b>, where RL guides GRMs to actively capture human intention, then predict the correct pair-wise scores; and <b>RL optimization from grouped comparison</b>, which enhances multi-modal RL scoring precision by grouped responses comparison. Experimental results demonstrate that our framework improves 4 MLLMs' performance across 7 benchmarks by 18.1%, while the baseline RLHF is only 5.3%. We further validate the out-of-distribution generalization of GRMs and the scaling trends of grouped comparisons. Additionally, we investigated GRMs' susceptibility to reward hacking within an overfitting setting. Our findings indicate that MLLMs use self-praising behaviors to deceptively receive high rewards from GRMs. Significantly, this deceptive behavior is also effective in misleading MLLM-as-judge benchmarks that are analogous to GRM scoring. Our code, models, and evaluation details can be found at <a href="https://generative-rlhf-v.github.io/">https://generative-rlhf-v.github.io/</a>.</p>
+        </div>
+
+        <div class="figure">
+            <img src="/Users/zhoujiayi/PKU/generative_rm_v/Generative-RLHF-V.github.io/assets/figure1.png" alt="Figure 1">
+            <div class="figure-caption">
+                <p>Learning from human preference is a major challenge in AI alignment. In MLLM's alignment, traditional RLHF methods only learn scalar scores from preferences. In contrast, our Generative RLHF-V can learn principles from preferences and optimize based on a more comprehensive comparison. Experimental results show that Generative RLHF-V elevates 2B and 3B MLLMs to 7B performance across 7 benchmarks. It also advances pretrained models to instruct model capabilities and enables open-source models to match closed-source experts.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>1. Introduction</h2>
+            
+            <blockquote>
+                <p><b>"The mediocre teacher tells. The good teacher explains. The superior teacher demonstrates. The great teacher inspires."</b></p>
+                <footer>--- William Arthur Ward saying – Education</footer>
+            </blockquote>
+            
+            <p>We propose <b>Generative RLHF-V</b>(ision), as shown in Figure 2, a novel alignment framework integrating the vision GRM with RL fine-tuning. Our pipeline consists of two stages: <b>generative reward modeling from multi-model preference</b> and <b>RL optimization from grouped comparison</b>. Our reward model extends the self-principled critique tuning (SPCT) pipeline to the vision scenario, training MLLMs as GRMs using RL, with rule-based rewards from annotated ground truth in preference datasets. In contrast to the findings of SPCT, we find that in the multi-modal scenario, enabling GRMs to explore principles from preferences autonomously yields superior generalization compared to selecting principles from a reference set. Our RL optimization uses GRMs to conduct pairwise competitive scoring for n responses within each response group, taking the average as the RL optimization objective for the corresponding response.</p>
+        </div>
+
+        <div class="figure">
+            <img src="/Users/zhoujiayi/PKU/generative_rm_v/Generative-RLHF-V.github.io/assets/figure2.png" alt="Figure 2">
+            <div class="figure-caption">
+                <p>Comparison of our pipelines to traditional ones. <b>For reward modeling</b>, we make generative RM actively reason about the advantages and disadvantages between two answers, and output corresponding scores. If the better response gets a higher score, it provides a positive reward. <b>For RL optimization</b>, we compare responses in pairs within a group to obtain more accurate scores.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Key Contributions</h3>
+            <ul>
+                <li><b>RL-based GRMs for MLLM Alignment:</b> We develop a multi-modal GRM trained via RL, enabling explicit generation of human-aligned principles and precise reward predictions compared to supervised cases.</li>
+                <li><b>Multi-modal Generative RLHF:</b> We propose a method to scale up post-training by collecting n candidate responses and conducting exhaustive pairwise comparisons through the RL-based GRM, achieving a linear performance gain with increasing n.</li>
+                <li><b>A Pioneer Case Study of GRM Reward Hacking:</b> We find that RL over-training under an over-trained GRM can lead models to adopt <i>self-praising</i> behaviors to obtain high rewards, even achieving exceptionally high scores on benchmarks employing the MLLM-as-judge paradigm.</li>
+            </ul>
+        </div>
+
+
+        <div class="section">
+            <h2>Generative RLHF-V</h2>
+            
+            <p>The Generative RLHF-V pipeline mainly consists of two parts: generative reward modeling from reinforcement learning (RL) and RK from grouped comparison. The former references training MLLMs through RL as a vision generative reward model, <i>i.e.</i>, GRM-V. It actively reasons about the human principle behind two given responses and provides a pair-wise score comparison. The latter leverages the characteristics of GRM-V, collecting multiple responses for a given input and providing more accurate grouped scoring for them.</p>
+            
+            <h3>Generative Reward Modeling from RL</h3>
+        </div>
+
+        <div class="figure">
+            <img src="/Users/zhoujiayi/PKU/generative_rm_v/Generative-RLHF-V.github.io/assets/example.png" alt="Example of generative reward modeling from RL">
+            <div class="figure-caption">
+                <p>An example of generative reward modeling from RL. The goal of RL is to make MLLMs assign higher scores to responses that align with human preferences. Through RL optimization, MLLMs can infer the underlying principle behind how humans annotate these binary preferences.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            
+            <h3>Reinforcement Learning from Grouped Comparison</h3>
+        </div>
+
+        <div class="figure">
+            <img src="/Users/zhoujiayi/PKU/generative_rm_v/Generative-RLHF-V.github.io/assets/example_rl.png" alt="Example of RL from grouped comparison">
+            <div class="figure-caption">
+                <p>An example of RL from grouped comparison. Its advantage lies in utilizing grouped comparisons to achieve more accurate scoring. Response B provides accurate and comprehensive information, thus receiving the highest score; although response A is somewhat arbitrary, it performs accurate image recognition and obtains a higher score than C and D.</p>
+            </div>
+        </div>
+
+
+        <div class="section">
+            <h2>Main Results</h2>
+        </div>
+
+        <style>
+            table {
+              border-collapse: collapse;
+              width: 100%;
+              font-size: 0.85em;
+            }
+            th, td {
+              padding: 4px 6px;
+              text-align: left;
+              border-bottom: 1px solid #ddd;
+              white-space: nowrap;
+            }
+            tr.header {
+              border-top: 2px solid #000;
+              border-bottom: 2px solid #000;
+              font-weight: bold;
+            }
+            tr.highlight {
+              background-color: rgb(194, 223, 255);
+            }
+            .delta {
+              font-size: 0.7em;
+              color: gray;
+            }
+            .ours {
+              font-size: 0.7em;
+              color: rgb(0, 64, 255);
+              font-weight: bold;
+            }
+            .neg {
+              font-size: 0.7em;
+              color: rgb(35, 153, 78);
+            }
+            tr.divider {
+              border-top: 1px solid #000;
+            }
+          </style>
+          
+          <table>
+            <tr class="header">
+              <th>Model</th>
+              <th>Feedback</th>
+              <th>MIA-Bench</th>
+              <th>LLaVA-Wild</th>
+              <th>LLaVA-Wilder</th>
+              <th>MM-Safety</th>
+              <th>MSS-Bench</th>
+              <th>MM-Vet</th>
+              <th>MM-Vet-v2</th>
+            </tr>
+            <tr>
+              <td>Qwen2-VL-2B</td>
+              <td>N/A</td>
+              <td>45.31</td>
+              <td>61.46</td>
+              <td>47.18</td>
+              <td>38.12</td>
+              <td>46.98</td>
+              <td>32.12</td>
+              <td>27.15</td>
+            </tr>
+            <tr>
+              <td> + DPO</td>
+              <td>RM</td>
+              <td>51.04<span class="delta"> + 5.73</span></td>
+              <td>75.91<span class="delta"> + 14.45</span></td>
+              <td>48.12<span class="delta"> + 0.94</span></td>
+              <td>67.21<span class="delta"> + 29.09</span></td>
+              <td>49.52<span class="delta"> + 2.54</span></td>
+              <td>31.28<span class="neg"> - 0.84</span></td>
+              <td>31.28<span class="delta"> + 4.13</span></td>
+            </tr>
+            <tr>
+              <td> + PPO</td>
+              <td>RM</td>
+              <td>43.72<span class="neg"> - 1.59</span></td>
+              <td>73.79<span class="delta"> + 12.33</span></td>
+              <td>41.32<span class="neg"> - 5.86</span></td>
+              <td>59.83<span class="delta"> + 21.71</span></td>
+              <td>47.38<span class="delta"> + 0.40</span></td>
+              <td>33.56<span class="delta"> + 1.44</span></td>
+              <td>30.79<span class="delta"> + 3.64</span></td>
+            </tr>
+            <tr>
+              <td> + GRPO</td>
+              <td>RM</td>
+              <td>44.59<span class="neg"> - 0.72</span></td>
+              <td>69.87<span class="delta"> + 8.41</span></td>
+              <td>39.48<span class="neg"> - 7.70</span></td>
+              <td>69.27<span class="delta"> + 31.15</span></td>
+              <td>48.12<span class="delta"> + 1.14</span></td>
+              <td>29.15<span class="neg"> - 2.97</span></td>
+              <td>31.74<span class="delta"> + 4.59</span></td>
+            </tr>
+            <tr>
+              <td> + GRPO</td>
+              <td>GRM</td>
+              <td>46.81<span class="delta"> + 1.50</span></td>
+              <td>78.51<span class="delta"> + 17.05</span></td>
+              <td>45.01<span class="neg"> - 2.17</span></td>
+              <td>72.53<span class="delta"> + 34.41</span></td>
+              <td>51.45<span class="delta"> + 4.47</span></td>
+              <td>34.97<span class="delta"> + 2.85</span></td>
+              <td>36.36<span class="delta"> + 9.21</span></td>
+            </tr>
+            <tr>
+              <td> + GRPO</td>
+              <td>GRM + SFT</td>
+              <td>48.57<span class="delta"> + 3.26</span></td>
+              <td>81.87<span class="delta"> + 20.41</span></td>
+              <td>53.04<span class="delta"> + 5.86</span></td>
+              <td>74.56<span class="delta"> + 36.44</span></td>
+              <td>50.98<span class="delta"> + 4.00</span></td>
+              <td>36.78<span class="delta"> + 4.66</span></td>
+              <td>37.14<span class="delta"> + 9.99</span></td>
+            </tr>
+            <tr class="highlight">
+              <td><i><b> + GRLHF-V (Ours)</b></i></td>
+              <td>GRM + RL</td>
+              <td>53.13<span class="ours"> + 7.82</span></td>
+              <td>92.54<span class="ours"> + 31.08</span></td>
+              <td>62.84<span class="ours"> + 15.66</span></td>
+              <td>80.67<span class="ours"> + 42.55</span></td>
+              <td>53.87<span class="ours"> + 6.89</span></td>
+              <td>41.25<span class="ours"> + 9.13</span></td>
+              <td>45.16<span class="ours"> + 18.01</span></td>
+            </tr>
+            <tr class="divider">
+              <td>Qwen2.5-VL-3B-Instruct</td>
+              <td>N/A</td>
+              <td>68.01</td>
+              <td>89.63</td>
+              <td>63.65</td>
+              <td>41.18</td>
+              <td>49.58</td>
+              <td>59.16</td>
+              <td>44.94</td>
+            </tr>
+            <tr>
+              <td> + DPO</td>
+              <td>RM</td>
+              <td>74.37<span class="delta"> + 6.36</span></td>
+              <td>91.05<span class="delta"> + 1.42</span></td>
+              <td>66.71<span class="delta"> + 3.06</span></td>
+              <td>75.64<span class="delta"> + 34.46</span></td>
+              <td>52.57<span class="delta"> + 2.99</span></td>
+              <td>55.72<span class="neg"> - 3.44</span></td>
+              <td>45.41<span class="delta"> + 0.47</span></td>
+            </tr>
+            <tr>
+              <td> + PPO</td>
+              <td>RM</td>
+              <td>72.59<span class="delta"> + 4.58</span></td>
+              <td>93.76<span class="delta"> + 4.13</span></td>
+              <td>65.73<span class="delta"> + 2.08</span></td>
+              <td>71.25<span class="delta"> + 30.07</span></td>
+              <td>50.03<span class="delta"> + 0.45</span></td>
+              <td>60.08<span class="delta"> + 0.92</span></td>
+              <td>48.92<span class="delta"> + 3.98</span></td>
+            </tr>
+            <tr>
+              <td> + GRPO</td>
+              <td>RM</td>
+              <td>69.82<span class="delta"> + 1.81</span></td>
+              <td>93.94<span class="delta"> + 4.31</span></td>
+              <td>66.41<span class="delta"> + 2.76</span></td>
+              <td>69.83<span class="delta"> + 28.65</span></td>
+              <td>51.96<span class="delta"> + 2.38</span></td>
+              <td>56.92<span class="neg"> - 2.24</span></td>
+              <td>47.55<span class="delta"> + 2.61</span></td>
+            </tr>
+            <tr>
+              <td> + GRPO</td>
+              <td>GRM</td>
+              <td>75.56<span class="delta"> + 7.55</span></td>
+              <td>92.19<span class="delta"> + 2.56</span></td>
+              <td>67.18<span class="delta"> + 3.53</span></td>
+              <td>75.98<span class="delta"> + 34.80</span></td>
+              <td>57.66<span class="delta"> + 8.08</span></td>
+              <td>57.37<span class="neg"> - 1.79</span></td>
+              <td>49.15<span class="delta"> + 4.21</span></td>
+            </tr>
+            <tr>
+              <td> + GRPO</td>
+              <td>GRM + SFT</td>
+              <td>74.17<span class="delta"> + 6.16</span></td>
+              <td>96.73<span class="delta"> + 7.10</span></td>
+              <td>71.07<span class="ours"> + 7.42</span></td>
+              <td>72.45<span class="delta"> + 31.27</span></td>
+              <td>58.83<span class="delta"> + 9.25</span></td>
+              <td>59.27<span class="delta"> + 0.11</span></td>
+              <td>51.52<span class="delta"> + 6.58</span></td>
+            </tr>
+            <tr class="highlight">
+              <td><i><b> + GRLHF-V (Ours)</b></i></td>
+              <td>GRM + RL</td>
+              <td>79.67<span class="ours"> + 11.66</span></td>
+              <td>103.41<span class="ours"> + 13.78</span></td>
+              <td>68.46<span class="delta"> + 4.81</span></td>
+              <td>78.88<span class="ours"> + 37.70</span></td>
+              <td>62.33<span class="ours"> + 12.75</span></td>
+              <td>62.18<span class="ours"> + 3.02</span></td>
+              <td>55.18<span class="ours"> + 10.24</span></td>
+            </tr>
+            <tr class="divider">
+              <td>Qwen2-VL-7B</td>
+              <td>N/A</td>
+              <td>52.58</td>
+              <td>81.3</td>
+              <td>61.8</td>
+              <td>31.95</td>
+              <td>48.23</td>
+              <td>60.32</td>
+              <td>52.98</td>
+            </tr>
+            <tr>
+              <td>+ DPO</td>
+              <td>RM</td>
+              <td>57.01<span class="delta"> + 4.43</span></td>
+              <td>81.49<span class="delta"> + 0.19</span></td>
+              <td>59.75<span class="neg"> - 2.05</span></td>
+              <td>76.59<span class="delta"> + 44.64</span></td>
+              <td>49.87<span class="delta"> + 1.64</span></td>
+              <td>60.98<span class="delta"> + 0.66</span></td>
+              <td>53.09<span class="delta"> + 0.11</span></td>
+            </tr>
+            <tr>
+              <td> + PPO</td>
+              <td>RM</td>
+              <td>55.76<span class="delta"> + 3.18</span></td>
+              <td>83.06<span class="delta"> + 1.76</span></td>
+              <td>62.23<span class="delta"> + 0.43</span></td>
+              <td>65.87<span class="delta"> + 33.92</span></td>
+              <td>50.08<span class="delta"> + 1.85</span></td>
+              <td>57.83<span class="neg"> - 2.49</span></td>
+              <td>52.12<span class="neg"> - 0.86</span></td>
+            </tr>
+            <tr>
+              <td> + GRPO</td>
+              <td>RM</td>
+              <td>56.89<span class="delta"> + 4.31</span></td>
+              <td>81.25<span class="neg"> - 0.05</span></td>
+              <td>60.19<span class="neg"> - 1.61</span></td>
+              <td>68.14<span class="delta"> + 36.19</span></td>
+              <td>51.98<span class="delta"> + 3.75</span></td>
+              <td>56.85<span class="neg"> - 3.47</span></td>
+              <td>48.96<span class="neg"> - 4.02</span></td>
+            </tr>
+            <tr>
+              <td> + GRPO</td>
+              <td>GRM</td>
+              <td>59.72<span class="delta"> + 7.14</span></td>
+              <td>86.12<span class="delta"> + 4.82</span></td>
+              <td>68.30<span class="delta"> + 6.50</span></td>
+              <td>81.42<span class="delta"> + 49.47</span></td>
+              <td>50.21<span class="delta"> + 1.98</span></td>
+              <td>57.98<span class="neg"> - 2.34</span></td>
+              <td>54.49<span class="delta"> + 1.51</span></td>
+            </tr>
+            <tr>
+              <td> + GRPO</td>
+              <td>GRM+SFT</td>
+              <td>63.12<span class="ours"> + 10.54</span></td>
+              <td>92.91<span class="delta"> + 11.61</span></td>
+              <td>65.67<span class="delta"> + 3.87</span></td>
+              <td>77.27<span class="delta"> + 45.32</span></td>
+              <td>52.75<span class="delta"> + 4.52</span></td>
+              <td>58.79<span class="neg"> - 1.53</span></td>
+              <td>56.39<span class="delta"> + 3.41</span></td>
+            </tr>
+            <tr class="highlight">
+              <td><i><b> + GRLHF-V (Ours)</b></i></td>
+              <td>GRM + RL</td>
+              <td>62.31<span class="delta"> + 9.73</span></td>
+              <td>103.55<span class="ours"> + 22.25</span></td>
+              <td>71.98<span class="ours"> + 10.18</span></td>
+              <td>91.96<span class="ours"> + 60.01</span></td>
+              <td>54.83<span class="ours"> + 6.60</span></td>
+              <td>63.92<span class="ours"> + 3.60</span></td>
+              <td>59.11<span class="ours"> + 6.13</span></td>
+            </tr>
+            <tr class="divider">
+              <td>Qwen2.5-VL-7B-Instruct</td>
+              <td>N/A</td>
+              <td>74.26</td>
+              <td>97.05</td>
+              <td>71.56</td>
+              <td>50.67</td>
+              <td>51.96</td>
+              <td>68.32</td>
+              <td>67.23</td>
+            </tr>
+            <tr>
+              <td> + DPO</td>
+              <td>RM</td>
+              <td>81.55<span class="ours"> + 7.29</span></td>
+              <td>103.34<span class="delta"> + 6.29</span></td>
+              <td>72.08<span class="delta"> + 0.52</span></td>
+              <td>75.09<span class="delta"> + 24.42</span></td>
+              <td>52.72<span class="delta"> + 0.76</span></td>
+              <td>67.84<span class="neg"> - 0.48</span></td>
+              <td>66.98<span class="neg"> - 0.25</span></td>
+            </tr>
+            <tr>
+              <td> + PPO</td>
+              <td>RM</td>
+              <td>73.12<span class="neg"> - 1.14</span></td>
+              <td>101.62<span class="delta"> + 4.57</span></td>
+              <td>67.89<span class="neg"> - 3.67</span></td>
+              <td>76.59<span class="delta"> + 25.92</span></td>
+              <td>51.29<span class="neg"> - 0.67</span></td>
+              <td>67.89<span class="neg"> - 0.43</span></td>
+              <td>64.23<span class="neg"> - 3.00</span></td>
+            </tr>
+            <tr>
+              <td> + GRPO</td>
+              <td>RM</td>
+              <td>75.75<span class="delta"> + 1.49</span></td>
+              <td>101.65<span class="delta"> + 4.60</span></td>
+              <td>68.89<span class="neg"> - 2.67</span></td>
+              <td>68.26<span class="delta"> + 17.59</span></td>
+              <td>52.53<span class="delta"> + 0.57</span></td>
+              <td>66.85<span class="neg"> - 1.47</span></td>
+              <td>67.76<span class="delta"> + 0.53</span></td>
+            </tr>
+            <tr>
+              <td> + GRPO</td>
+              <td>GRM</td>
+              <td>71.88<span class="neg"> - 2.38</span></td>
+              <td>109.12<span class="delta"> + 12.07</span></td>
+              <td>73.32<span class="delta"> + 1.76</span></td>
+              <td>65.88<span class="delta"> + 15.21</span></td>
+              <td>53.12<span class="delta"> + 1.16</span></td>
+              <td>65.50<span class="neg"> - 2.82</span></td>
+              <td>65.08<span class="neg"> - 2.15</span></td>
+            </tr>
+            <tr>
+              <td> + GRPO</td>
+              <td>GRM + SFT</td>
+              <td>76.23<span class="delta"> + 1.97</span></td>
+              <td>103.50<span class="delta"> + 6.45</span></td>
+              <td>72.15<span class="delta"> + 0.59</span></td>
+              <td>70.23<span class="delta"> + 19.56</span></td>
+              <td>54.08<span class="delta"> + 2.12</span></td>
+              <td>64.93<span class="neg"> - 3.39</span></td>
+              <td>68.12<span class="delta"> + 0.89</span></td>
+            </tr>
+            <tr class="highlight">
+              <td><i><b> + GRLHF-V (Ours)</b></i></td>
+              <td>GRM + RL</td>
+              <td>79.86<span class="delta"> + 5.60</span></td>
+              <td>113.71<span class="ours"> + 16.66</span></td>
+              <td>76.04<span class="ours"> + 4.48</span></td>
+              <td>74.91<span class="ours"> + 24.24</span></td>
+              <td>59.74<span class="ours"> + 7.78</span></td>
+              <td>72.94<span class="ours"> + 4.62</span></td>
+              <td>71.86<span class="ours"> + 4.63</span></td>
+            </tr>
+          </table>
+
+        <div class="section">
+            <h3>4.3 Learned Optimized Principles of RL-Based GRMs</h3>
+        </div>
+
+        <div class="figure">
+            <img src="/Users/zhoujiayi/PKU/generative_rm_v/Generative-RLHF-V.github.io/assets/rm_exp.png" alt="Comparison of RMs accuracy">
+            <div class="figure-caption">
+                <p>Comparison of RMs accuracy on OOD discriminative tasks. (P) denotes the concatenation of the annotation principle from the corresponding preference dataset to the models' output, serving as hints for inference. All models represented by the bar charts were trained on the Align-Anything dataset. The purple dashed line indicates expert performance.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>4.4 Scalability Analysis of Candidate Responses (n)</h3>
+        </div>
+
+        <div class="figure">
+            <img src="/Users/zhoujiayi/PKU/generative_rm_v/Generative-RLHF-V.github.io/assets/exp_rl_scaling.png" alt="Scaling trend of RL performance">
+            <div class="figure-caption">
+                <p>Scaling trend of RL performance with the number of candidate responses n, where GC denotes grouped comparison. It reveals that integrating GC and RL with the GRM framework significantly enhances RL performance across various settings of n. Moreover, this improvement becomes more pronounced as n increases.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>4.5 Scoring Accuracy Analysis</h3>
+        </div>
+
+        <div class="figure">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <caption>Performance of GRMs in the MLLM-as-a-Judge Score task, measured by the Pearson coefficient.</caption>
+                            <thead>
+                                <tr style="border-top: 2px solid black; border-bottom: 1px solid black;">
+                                <th style="padding: 2px; text-align: left; font-weight: bold;">Models</th>
+                                <th style="padding: 2px; text-align: center; font-weight: bold;">Score</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                <td style="padding: 2px; text-align: left;">Qwen2.5-VL-7B-Instruct</td>
+                                <td style="padding: 2px; text-align: center;">0.36</td>
+                                </tr>
+                                <tr>
+                                <td style="padding: 2px; text-align: left;">+ GRM + SFT (w/ GC)</td>
+                                <td style="padding: 2px; text-align: center;">0.41</td>
+                                </tr>
+                                <tr>
+                                <td style="padding: 2px; text-align: left;">+ GRM + RL (w/o GC)</td>
+                                <td style="padding: 2px; text-align: center;">0.42</td>
+                                </tr>
+                                <tr>
+                                <td style="padding: 2px; text-align: left; font-weight: bold;">+ GRM + RL (w/ GC)</td>
+                                <td style="padding: 2px; text-align: center; font-weight: bold;">0.45</td>
+                                </tr>
+                                <tr style="border-top: 1px solid black; border-bottom: 2px solid black;">
+                                <td style="padding: 2px; text-align: left;">GPT-4o</td>
+                                <td style="padding: 2px; text-align: center;">0.49</td>
+                                </tr>
+                                </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <img src="/Users/zhoujiayi/PKU/generative_rm_v/Generative-RLHF-V.github.io/assets/exp_scores.png" alt="Scoring distribution">
+                    <div class="figure-caption">
+                        <p>The scoring distribution of the GRM + RL model on MLLM-as-a-judge's Score task. Figure (a) is the annotated human scores, while Figure (b) is GRM + RL scores and Figure (c) is its fine-grained scores distribution.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>4.6 Case Study: Reward Hacking of GRMs</h3>
+        </div>
+
+        <div class="figure">
+            <img src="/Users/zhoujiayi/PKU/generative_rm_v/Generative-RLHF-V.github.io/assets/exp_hack.png" alt="Reward hacking behavior">
+            <div class="figure-caption">
+                <p>The reward hacking behavior manifested by GRLHF-V and its associated quantitative performance, under conditions of overfitting in both reward modeling and RL training.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>4.7 Ablation: Including Specific Principles in GRM Training</h3>
+            
+            <div class="table-responsive" style="width: 80%; margin: 0 auto;">
+                <table class="table table-bordered">
+                    <caption>Comparison of GRLHF training with (w/ P) or without (w/o P) given principles.</caption>
+                    <thead>
+                        <tr>
+                            <th>Benchmarks</th>
+                            <th style="padding: 5px; text-align: center;">w/ P</th>
+                            <th style="padding: 5px; text-align: center;">w/o P</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <td style="padding: 5px; text-align: left;">Align-Anything</td>
+                          <td style="padding: 5px; text-align: center;">0.83</td>
+                          <td style="padding: 5px; text-align: center;">0.79<span style="font-size: 0.7em; color: rgb(35, 153, 78);"> - 0.04</span></td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 5px; text-align: left;">Beaver-V</td>
+                          <td style="padding: 5px; text-align: center;">0.73</td>
+                          <td style="padding: 5px; text-align: center;">0.78<span style="font-size: 0.7em; color: rgb(0, 64, 255); font-weight: bold;"> + 0.05</span></td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 5px; text-align: left;">LLaVA-Critic</td>
+                          <td style="padding: 5px; text-align: center;">0.76</td>
+                          <td style="padding: 5px; text-align: center;">0.79<span style="font-size: 0.7em; color: rgb(0, 64, 255); font-weight: bold;"> + 0.03</span></td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 5px; text-align: left;">MLLM-as-a-Judge</td>
+                          <td style="padding: 5px; text-align: center;">0.63</td>
+                          <td style="padding: 5px; text-align: center;">0.68<span style="font-size: 0.7em; color: rgb(0, 64, 255); font-weight: bold;"> + 0.05</span></td>
+                        </tr>
+                        <tr>
+                          <td style="border-top: 1px solid black; padding: 5px; text-align: left;">MIA-Bench</td>
+                          <td style="border-top: 1px solid black; padding: 5px; text-align: center;">60.76</td>
+                          <td style="border-top: 1px solid black; padding: 5px; text-align: center;">62.31<span style="font-size: 0.7em; color: rgb(0, 64, 255); font-weight: bold;"> + 1.55</span></td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 5px; text-align: left;">LLaVA-Wild</td>
+                          <td style="padding: 5px; text-align: center;">99.57</td>
+                          <td style="padding: 5px; text-align: center;">103.55<span style="font-size: 0.7em; color: rgb(0, 64, 255); font-weight: bold;"> + 3.98</span></td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 5px; text-align: left;">LLaVA-Wilder</td>
+                          <td style="padding: 5px; text-align: center;">63.75</td>
+                          <td style="padding: 5px; text-align: center;">71.98<span style="font-size: 0.7em; color: rgb(0, 64, 255); font-weight: bold;"> + 8.23</span></td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 5px; text-align: left;">MM-Vet</td>
+                          <td style="padding: 5px; text-align: center;">62.57</td>
+                          <td style="padding: 5px; text-align: center;">63.92<span style="font-size: 0.7em; color: rgb(0, 64, 255); font-weight: bold;"> + 1.35</span></td>
+                        </tr>
+                        <tr>
+                          <td style="border-bottom: 2px solid black; padding: 5px; text-align: left;">MM-Vet-v2</td>
+                          <td style="border-bottom: 2px solid black; padding: 5px; text-align: center;">55.35</td>
+                          <td style="border-bottom: 2px solid black; padding: 5px; text-align: center;">59.11<span style="font-size: 0.7em; color: rgb(0, 64, 255); font-weight: bold;"> + 3.76</span></td>
+                        </tr>
+                      </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>5. Conclusions</h2>
+            <p>Section content would go here.</p>
+        </div>
+
+        <div class="section">
+            <h2>6. Limitations</h2>
+            <p>Section content would go here.</p>
+        </div>
     </div>
-    <section>
-        <!-- This webpage template was recycled from <a href='https://nv-tlabs.github.io/LION/'>here</a>. -->
-        <center><p><a href='https://accessibility.mit.edu/'><b>Accessibility</b></a></p></center>
-    </section>
-    
 
-
-</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
