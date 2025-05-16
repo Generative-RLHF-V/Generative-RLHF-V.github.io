@@ -489,7 +489,40 @@
       }
     }
     
-    </style>
+    /* Elegant Research Question Styling */
+    .research-question {
+        position: relative;
+        margin: 40px 0 30px;
+        padding-left: 25px;
+        font-size: 1.35rem;
+        font-weight: 500;
+        color: #2a3b4c;
+        letter-spacing: 0.5px;
+        border-bottom: 1px solid #e0e0e0;
+        padding-bottom: 12px;
+    }
+    
+    .research-question::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 6px;
+        height: 70%;
+        background: linear-gradient(to bottom, #5364cc, #208799);
+        border-radius: 3px;
+    }
+    
+    .research-question .rq-number {
+        display: inline-block;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #5364cc;
+        margin-right: 10px;
+        letter-spacing: 1px;
+    }
+</style>
 
     <link rel="stylesheet" href="bootstrap-grid.css">
 
@@ -629,13 +662,14 @@
     <div class="container">
         <div class="paper-title">
             <h1>Generative RLHF-V: Learning Principles from Multi-modal Human Preference</h1>
+            <p style="font-size: 1.4rem; font-style: italic; color: #5364cc; margin-top: 0.5rem; margin-bottom: 1.5rem;">The mediocre teacher tells. The great teacher inspires.</p>
         </div>
 
         <div class="authors">
             <p>Author Names</p>
             <p>Affiliations</p>
         </div>
-        <div style="height: 20px;"></div> <!-- 空行 -->
+        <div style="height: 20px;"></div><!-- 空行 -->
         <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -699,6 +733,8 @@
             </a>
           </div>
         
+        <!-- Image Carousel -->
+
         <div class="abstract">
             <h2 id="abstract">Abstract</h2>
             <p>Training multi-modal large language models (MLLMs) that align with human intentions is a long-term challenge. Traditional score-only reward models for alignment suffer from low accuracy, weak generalization, and poor interpretability, blocking the progress of alignment methods, <i>e.g.,</i> reinforcement learning from human feedback (RLHF). This paper introduces Generative RLHF-V, a novel alignment framework that integrates Generative Reward Models (GRMs) with multi-modal RLHF. We propose a two-stage pipeline: <b>generative reward modeling from multi-model preference</b>, where RL guides GRMs to actively capture human intention, then predict the correct pair-wise scores; and <b>RL optimization from grouped comparison</b>, which enhances multi-modal RL scoring precision by grouped responses comparison. Experimental results demonstrate that our framework improves 4 MLLMs' performance across 7 benchmarks by 18.1%, while the baseline RLHF is only 5.3%. We further validate the out-of-distribution generalization of GRMs and the scaling trends of grouped comparisons. Additionally, we investigated GRMs' susceptibility to reward hacking within an overfitting setting. Our findings indicate that MLLMs use self-praising behaviors to deceptively receive high rewards from GRMs. Significantly, this deceptive behavior is also effective in misleading MLLM-as-judge benchmarks that are analogous to GRM scoring. Our code, models, and evaluation details can be found at <a href="https://generative-rlhf-v.github.io/">https://generative-rlhf-v.github.io/</a>.</p>
@@ -714,15 +750,212 @@
                 </div>
             </div>
             <div class="figure-caption">
-                <p>Learning from human preference is a major challenge in AI alignment. In MLLM's alignment, traditional RLHF methods only learn scalar scores from preferences. In contrast, our Generative RLHF-V can learn principles from preferences and optimize based on a more comprehensive comparison. Experimental results show that Generative RLHF-V elevates 2B and 3B MLLMs to 7B performance across 7 benchmarks. It also advances pretrained models to instruct model capabilities and enables open-source models to match closed-source experts.</p>
+                <p>earning principles from human preference is a major challenge in AI alignment. In
+                    MLLM's alignment, traditional RLHF methods only learn scalar scores from preferences. In contrast, our Generative RLHF-V can learn principles from preferences and optimize based on a more comprehensive comparison. Experimental results show that Generative RLHF-V elevates 2B and 3B MLLMs to 7B performance across 7 benchmarks. It also advances pretrained models to instruct model capabilities and enables open-source models to match closed-source experts.</p>
             </div>
         </div>
+
+        <style>
+            .image-carousel {
+              width: 100%;
+              max-width: 900px;
+              margin: 30px auto;
+              position: relative;
+              overflow: hidden;
+              border-radius: 10px;
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            }
+            
+            .carousel-slides {
+              display: flex;
+              transition: transform 0.5s ease-in-out;
+              height: 450px;
+            }
+            
+            .carousel-slide {
+              min-width: 100%;
+              position: relative;
+            }
+            
+            .carousel-slide img {
+              width: 100%;
+              height: 450px;
+              object-fit: contain;
+              background-color: #f8f9fa;
+            }
+            
+            .carousel-controls {
+              position: absolute;
+              bottom: 15px;
+              left: 0;
+              right: 0;
+              display: flex;
+              justify-content: center;
+              gap: 10px;
+              z-index: 10;
+            }
+            
+            .carousel-dot {
+              width: 12px;
+              height: 12px;
+              border-radius: 50%;
+              background-color: rgba(255, 255, 255, 0.6);
+              border: 2px solid rgba(0, 0, 0, 0.3);
+              cursor: pointer;
+              transition: all 0.3s ease;
+            }
+            
+            .carousel-dot.active {
+              background-color: #4F75FF;
+              transform: scale(1.2);
+            }
+            
+            .carousel-arrow {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 40px;
+              height: 40px;
+              background-color: rgba(255, 255, 255, 0.8);
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              font-size: 20px;
+              color: #333;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+              z-index: 10;
+              transition: all 0.3s ease;
+            }
+            
+            .carousel-arrow:hover {
+              background-color: rgba(255, 255, 255, 1);
+              transform: translateY(-50%) scale(1.1);
+            }
+            
+            .carousel-arrow.prev {
+              left: 15px;
+            }
+            
+            .carousel-arrow.next {
+              right: 15px;
+            }
+            
+            @media (max-width: 768px) {
+              .image-carousel {
+                max-width: 90%;
+                height: 350px;
+              }
+              .carousel-slides, .carousel-slide img {
+                height: 350px;
+              }
+            }
+          </style>
+          
+          <div class="image-carousel">
+            <div class="carousel-slides">
+              <div class="carousel-slide">
+                <img src="./assets/appendix_grm_example_1.png" alt="Generative RM Example 1">
+              </div>
+              <div class="carousel-slide">
+                <img src="./assets/appendix_grm_example_2.png" alt="Generative RM Example 2">
+              </div>
+              <div class="carousel-slide">
+                <img src="./assets/appendix_llava.png" alt="LLaVA Example">
+              </div>
+              <div class="carousel-slide">
+                <img src="./assets/appendix_safe.png" alt="Safe Example">
+              </div>
+            </div>
+            
+            <div class="carousel-arrow prev">&#10094;</div>
+            <div class="carousel-arrow next">&#10095;</div>
+            
+            <div class="carousel-controls">
+              <div class="carousel-dot active"></div>
+              <div class="carousel-dot"></div>
+              <div class="carousel-dot"></div>
+              <div class="carousel-dot"></div>
+            </div>
+          </div>
+          
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              const slides = document.querySelector('.carousel-slides');
+              const dots = document.querySelectorAll('.carousel-dot');
+              const prevBtn = document.querySelector('.carousel-arrow.prev');
+              const nextBtn = document.querySelector('.carousel-arrow.next');
+              let currentIndex = 0;
+              const slideCount = document.querySelectorAll('.carousel-slide').length;
+              
+              // Auto slide functionality
+              let autoSlideInterval = setInterval(goToNextSlide, 5000);
+              
+              function goToSlide(index) {
+                // Reset interval when manually changing slides
+                clearInterval(autoSlideInterval);
+                autoSlideInterval = setInterval(goToNextSlide, 5000);
+                
+                currentIndex = index;
+                if (currentIndex < 0) currentIndex = slideCount - 1;
+                if (currentIndex >= slideCount) currentIndex = 0;
+                
+                slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                // Update active dot
+                dots.forEach((dot, i) => {
+                  dot.classList.toggle('active', i === currentIndex);
+                });
+              }
+              
+              function goToNextSlide() {
+                goToSlide(currentIndex + 1);
+              }
+              
+              function goToPrevSlide() {
+                goToSlide(currentIndex - 1);
+              }
+              
+              // Event listeners
+              prevBtn.addEventListener('click', goToPrevSlide);
+              nextBtn.addEventListener('click', goToNextSlide);
+              
+              dots.forEach((dot, i) => {
+                dot.addEventListener('click', () => goToSlide(i));
+              });
+              
+              // Touch events for mobile
+              let touchStartX = 0;
+              let touchEndX = 0;
+              
+              const carousel = document.querySelector('.image-carousel');
+              
+              carousel.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+              });
+              
+              carousel.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+              });
+              
+              function handleSwipe() {
+                const swipeThreshold = 50;
+                if (touchEndX < touchStartX - swipeThreshold) {
+                  goToNextSlide();
+                } else if (touchEndX > touchStartX + swipeThreshold) {
+                  goToPrevSlide();
+                }
+              }
+            });
+          </script>
 
         <div class="section">
             <h2 id="introduction">Introduction</h2>
             
             <blockquote>
-                <p><b>"The mediocre teacher tells. The good teacher explains. The superior teacher demonstrates. The great teacher inspires."</b></p>
+                <p><b>"The mediocre teacher tells. The great teacher inspires."</b></p>
                 <footer>--- William Arthur Ward saying – Education</footer>
             </blockquote>
             
@@ -775,9 +1008,74 @@
 
 
         <div class="section">
-            <h2 id="main-results">Main Results</h2>
+            <h2 id="main-results">Principles Learning of RL-Based GRMs</h2>
         </div>
 
+        <div class="section">
+            <h3 id="scoring-accuracy" class="research-question"><span class="rq-number">RQ 1</span>Does the GRM+RL facilitate more generalizable principle learning from preferences?</h3>
+        </div> 
+
+        <div class="figure">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <caption>Performance of GRMs in the MLLM-as-a-Judge Score task, measured by the Pearson correlation coefficient.</caption>
+                            <thead>
+                                <tr style="border-top: 2px solid black; border-bottom: 1px solid black;">
+                                <th style="padding: 2px; text-align: left; font-weight: bold;">Models</th>
+                                <th style="padding: 2px; text-align: center; font-weight: bold;">w/ GC</th>
+                                <th style="padding: 2px; text-align: center; font-weight: bold;">w/o GC</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td style="padding: 2px; text-align: left;">GRM</td>
+                                <td style="padding: 2px; text-align: center;">0.41</td>
+                                <td style="padding: 2px; text-align: center;">0.38</td>
+                                </tr>
+                                <tr>
+                                <td style="padding: 2px; text-align: left;">GRM+SFT</td>
+                                <td style="padding: 2px; text-align: center;">0.37</td>
+                                <td style="padding: 2px; text-align: center;">0.33</td>
+                                </tr>
+                                <tr>
+                                <td style="padding: 2px; text-align: left;">GRM+RL</td>
+                                <td style="padding: 2px; text-align: center;">0.43</td>
+                                <td style="padding: 2px; text-align: center;">0.37</td>
+                                </tr>
+                                <tr style="border-top: 1px solid black; border-bottom: 2px solid black;">
+                                <td style="padding: 2px; text-align: left;">GPT-4o (Expert)</td>
+                                <td style="padding: 2px; text-align: center;">0.48</td>
+                                <td style="padding: 2px; text-align: center;">0.46</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <img src="./assets/exp_scores.png" alt="Scoring distribution">
+                    <div class="figure-caption">
+                        <p>The scoring distribution of the GRM+RL model on MLLM-as-a-judge's Score task. Figure (a) is the annotated human scores, while Figure (b) is GRM+RL scores and Figure (c) is its fine-grained scores distribution.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 id="learned-principles" class="research-question"><span class="rq-number">RQ 2</span>Can grouped comparison yield more accurate reward scores of GRMs?</h3>
+        </div>
+
+        <div class="figure">
+            <img src="./assets/rm_exp.png" alt="Comparison of RMs accuracy">
+            <div class="figure-caption">
+                <p>Comparison of RMs accuracy on OOD discriminative tasks. (P) denotes the concatenation of the annotation principle from the corresponding preference dataset to the models' output, serving as hints for inference. All models represented by the bar charts were trained on the Align-Anything dataset. The purple dashed line indicates expert performance.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 id="table" class="research-question"><span class="rq-number">RQ 3</span>Are GRM+RL and grouped comparison competitive methods for multi-modal RLHF?</h3>
+        </div>
         <style>
             table {
               border-collapse: collapse;
@@ -999,7 +1297,7 @@
               <td>57.01<span class="delta"> + 4.43</span></td>
               <td>81.49<span class="delta"> + 0.19</span></td>
               <td>59.75<span class="neg"> - 2.05</span></td>
-              <td>76.59<span class="delta"> + 44.64</span></td>
+              <td>81.59<span class="delta"> + 49.64</span></td>
               <td>49.87<span class="delta"> + 1.64</span></td>
               <td>60.98<span class="delta"> + 0.66</span></td>
               <td>53.09<span class="delta"> + 0.11</span></td>
@@ -1010,7 +1308,7 @@
               <td>55.76<span class="delta"> + 3.18</span></td>
               <td>83.06<span class="delta"> + 1.76</span></td>
               <td>62.23<span class="delta"> + 0.43</span></td>
-              <td>65.87<span class="delta"> + 33.92</span></td>
+              <td>80.87<span class="delta"> + 48.92</span></td>
               <td>50.08<span class="delta"> + 1.85</span></td>
               <td>57.83<span class="neg"> - 2.49</span></td>
               <td>52.12<span class="neg"> - 0.86</span></td>
@@ -1021,7 +1319,7 @@
               <td>56.89<span class="delta"> + 4.31</span></td>
               <td>81.25<span class="neg"> - 0.05</span></td>
               <td>60.19<span class="neg"> - 1.61</span></td>
-              <td>68.14<span class="delta"> + 36.19</span></td>
+              <td>83.14<span class="delta"> + 46.19</span></td>
               <td>51.98<span class="delta"> + 3.75</span></td>
               <td>56.85<span class="neg"> - 3.47</span></td>
               <td>48.96<span class="neg"> - 4.02</span></td>
@@ -1040,10 +1338,10 @@
             <tr>
               <td> + GRPO</td>
               <td>GRM+SFT</td>
-              <td>63.12<span class="ours"> + 10.54</span></td>
+              <td>59.87<span class="delta"> + 7.29</span></td>
               <td>92.91<span class="delta"> + 11.61</span></td>
               <td>65.67<span class="delta"> + 3.87</span></td>
-              <td>77.27<span class="delta"> + 45.32</span></td>
+              <td>87.27<span class="delta"> + 55.32</span></td>
               <td>52.75<span class="delta"> + 4.52</span></td>
               <td>58.79<span class="neg"> - 1.53</span></td>
               <td>56.39<span class="delta"> + 3.41</span></td>
@@ -1139,18 +1437,7 @@
           </table>
 
         <div class="section">
-            <h3 id="learned-principles">Learned Optimized Principles of RL-Based GRMs</h3>
-        </div>
-
-        <div class="figure">
-            <img src="./assets/rm_exp.png" alt="Comparison of RMs accuracy">
-            <div class="figure-caption">
-                <p>Comparison of RMs accuracy on OOD discriminative tasks. (P) denotes the concatenation of the annotation principle from the corresponding preference dataset to the models' output, serving as hints for inference. All models represented by the bar charts were trained on the Align-Anything dataset. The purple dashed line indicates expert performance.</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h3 id="scalability">Scalability Analysis of Candidate Responses (n)</h3>
+            <h3 id="scalability" class="research-question"><span class="rq-number">RQ 4</span>Ablations of GRM+RL, grouped comparison and the number of candidate responses.</h3>
         </div>
 
         <div class="figure">
@@ -1160,58 +1447,9 @@
             </div>
         </div>
 
-        <div class="section">
-            <h3 id="scoring-accuracy">Scoring Accuracy Analysis</h3>
-        </div>
-
-        <div class="figure">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="table-responsive">
-                        <table class="table table-bordered">
-                            <caption>Performance of GRMs in the MLLM-as-a-Judge Score task, measured by the Pearson coefficient.</caption>
-                            <thead>
-                                <tr style="border-top: 2px solid black; border-bottom: 1px solid black;">
-                                <th style="padding: 2px; text-align: left; font-weight: bold;">Models</th>
-                                <th style="padding: 2px; text-align: center; font-weight: bold;">Score</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                <td style="padding: 2px; text-align: left;">Qwen2.5-VL-7B-Instruct</td>
-                                <td style="padding: 2px; text-align: center;">0.36</td>
-                                </tr>
-                                <tr>
-                                <td style="padding: 2px; text-align: left;">+ GRM + SFT (w/ GC)</td>
-                                <td style="padding: 2px; text-align: center;">0.41</td>
-                                </tr>
-                                <tr>
-                                <td style="padding: 2px; text-align: left;">+ GRM + RL (w/o GC)</td>
-                                <td style="padding: 2px; text-align: center;">0.42</td>
-                                </tr>
-                                <tr>
-                                <td style="padding: 2px; text-align: left; font-weight: bold;">+ GRM + RL (w/ GC)</td>
-                                <td style="padding: 2px; text-align: center; font-weight: bold;">0.45</td>
-                                </tr>
-                                <tr style="border-top: 1px solid black; border-bottom: 2px solid black;">
-                                <td style="padding: 2px; text-align: left;">GPT-4o</td>
-                                <td style="padding: 2px; text-align: center;">0.49</td>
-                                </tr>
-                                </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="col-md-9">
-                    <img src="./assets/exp_scores.png" alt="Scoring distribution">
-                    <div class="figure-caption">
-                        <p>The scoring distribution of the GRM + RL model on MLLM-as-a-judge's Score task. Figure (a) is the annotated human scores, while Figure (b) is GRM + RL scores and Figure (c) is its fine-grained scores distribution.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="section">
-            <h3 id="reward-hacking">Case Study: Reward Hacking of GRMs</h3>
+            <h3 id="reward-hacking" class="research-question"><span class="rq-number">RQ 5</span>What is the reward hacking behaviors of an over-trained Generative RLHF-V model?</h3>
         </div>
 
         <div class="figure">
@@ -1222,7 +1460,7 @@
         </div>
 
         <div class="section">
-            <h3 id="ablation">Ablation: Including Specific Principles in GRM Training</h3>
+            <h3 id="ablation" class="research-question"><span class="rq-number">RQ 6</span>Why not including specific principles in GRM+RL training.</h3>
             
             <div class="table-responsive" style="width: 80%; margin: 0 auto;">
                 <table class="table table-bordered">
