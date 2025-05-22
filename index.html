@@ -963,7 +963,21 @@
         </div>
 
         <div class="figure">
-            <img src="./assets/figure2.png" alt="Figure 2">
+            <img id="frameworkGif" src="./assets/framework.gif" alt="Figure 2" style="display: block;">
+            <img id="frameworkStatic" src="./assets/framework.gif" alt="Figure 2" style="display: none;">
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const gif = document.getElementById('frameworkGif');
+                    const static = document.getElementById('frameworkStatic');
+                    
+                    // Set a timeout approximately equal to the GIF duration
+                    // Adjust the timeout value (in milliseconds) to match your GIF's actual duration
+                    setTimeout(function() {
+                        gif.style.display = 'none';
+                        static.style.display = 'block';
+                    }, 5000); // 5000ms = 5 seconds, adjust based on actual GIF length
+                });
+            </script>
             <div class="figure-caption">
                 <p>Comparison of our pipelines to traditional ones. <b>For reward modeling</b>, we make generative RM actively reason about the advantages and disadvantages between two answers, and output corresponding scores. If the better response gets a higher score, it provides a positive reward. <b>For RL optimization</b>, we compare responses in pairs within a group to obtain more accurate scores.</p>
             </div>
